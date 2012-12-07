@@ -3,10 +3,6 @@
  * The Header for our theme.
  *
  * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
  */
 ?><!DOCTYPE html>
 <!--[if IE 6]>
@@ -45,7 +41,30 @@
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 
 	?></title>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+<!-- REQUIRED FOR PARALLAX 
+<script type="text/javascript" language="JavaScript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.6.4.min.js" ></script>
+<script type="text/javascript" language="JavaScript" src="<?php bloginfo('template_url'); ?>/js/jquery.jparallax.min.js" ></script>
+<script type="text/javascript" language="JavaScript" src="<?php bloginfo('template_url'); ?>/js/jquery.event.frame.js" ></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function() 
+{
+	$('#parallax .parallax-layer')
+	.parallax({
+		mouseport: $('#parallax')
+	});
+});
+
+});
+</script>  
+ /REQUIRED FOR PARALLAX -->
+
+
+
+<link rel="shortcut icon" href="images/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
@@ -67,9 +86,21 @@
 ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>
 <div id="page" class="hfeed">
+	<!--<div id="spuulLogo"><img style="height: 40px;" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2012/11/spuul_white_transparent.png" alt="Spuul logo" /></div> -->
 	<header id="branding" role="banner">
+		<!-- parallax -->
+
+		<!-- REQUIRED FOR PARALLAX 
+		<div id="parallax" class="clear">
+
+		   <div class="parallax-layer" style="width:100%; height:288px;">
+				<img src="<?php bloginfo('template_directory'); ?>/images/para5.png" alt="" style="width:100%; height:288px;"/>
+		   </div>
+		</div>
+		 /REQUIRED FOR PARALLAX -->
+
 			<hgroup>
 				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -88,7 +119,7 @@
 						$header_image_width = HEADER_IMAGE_WIDTH;
 					}
 					?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<a href="<?php echo esc_url( home_url( '/' ) );?>">
 				<?php
 					// The header image
 					// Check if this is a post or page, if it has a thumbnail, and if it's a big one
@@ -116,9 +147,9 @@
 				// Has the text been hidden?
 				if ( 'blank' == get_header_textcolor() ) :
 			?>
-				<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
+				<!--<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
 				<?php get_search_form(); ?>
-				</div>
+				</div>-->
 			<?php
 				else :
 			?>
