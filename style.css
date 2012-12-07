@@ -1,18 +1,17 @@
 /*
-Theme Name: Twenty Eleven
+Theme Name: Spuul Blog
 Theme URI: http://wordpress.org/extend/themes/twentyeleven
-Author: the WordPress team
-Author URI: http://wordpress.org/
-Description: The 2011 theme for WordPress is sophisticated, lightweight, and adaptable. Make it yours with a custom menu, header image, and background -- then go further with available theme options for light or dark color scheme, custom link colors, and three layout choices. Twenty Eleven comes equipped with a Showcase page template that transforms your front page into a showcase to show off your best content, widget support galore (sidebar, three footer areas, and a Showcase page widget area), and a custom "Ephemera" widget to display your Aside, Link, Quote, or Status posts. Included are styles for print and for the admin editor, support for featured images (as custom header images on posts and pages and as large images on featured "sticky" posts), and special styles for six different post formats.
-Version: 1.4
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
-Text Domain: twentyeleven
+Author: Spuul Developer
+Author URI: www.spuul.com
+Description: The Spuul blog website. 
+Template: twentyeleven
+Version: 1.0.0
+Text Domain: Spuul
 */
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -23,7 +22,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: inherit;
+	font-family: helvetica, sans-serif;
 	font-size: 100%;
 	font-style: inherit;
 	font-weight: inherit;
@@ -36,7 +35,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 }
 body {
-	background: #fff;
 	line-height: 1;
 }
 ol, ul {
@@ -65,15 +63,29 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+/* Parallax */
+ #parallax-header { height:200px; background-color:gray;  }
+ #parallax {position:relative; overflow:hidden; width:100%; height:288px;
+	background-image:url('images/para1.png');
+ }
+.parallax-viewport {
+    position: relative;     /* relative, absolute, fixed */
+    overflow: hidden;
+}
+.parallax-layer {
+    position: absolute;
+}
+
 
 /* =Structure
 ----------------------------------------------- */
 
 body {
-	padding: 0 2em;
+	/*padding: 0 0em;*/
+	padding: 0 30px;
 }
 #page {
-	margin: 2em auto;
+	margin: 0 auto;
 	max-width: 1000px;
 }
 #branding hgroup {
@@ -84,17 +96,21 @@ body {
 }
 #primary {
 	float: left;
-	margin: 0 -26.4% 0 0;
-	width: 100%;
+	/*margin: 0 -26.4% 0 0;*/
+	width: 70%;
 }
 #content {
-	margin: 0 34% 0 7.6%;
-	width: 58.4%;
 }
 #secondary {
-	float: right;
-	margin-right: 7.6%;
-	width: 18.8%;
+	margin: 70px 0 0 0;
+	/*padding: 2%;*/
+	float: left;
+	/*margin-right: 2%;*/
+	width: 30%;
+}
+
+#secondary .padding{
+	padding-left: 30px;
 }
 
 /* Singular */
@@ -103,7 +119,7 @@ body {
 }
 .singular #content,
 .left-sidebar.singular #content {
-	margin: 0 7.6%;
+	margin: 0;
 	position: relative;
 	width: auto;
 }
@@ -112,7 +128,7 @@ body {
 .singular footer.entry-meta,
 .singular #comments-title {
 	margin: 0 auto;
-	width: 68.9%;
+	width: 100%;
 }
 
 /* Attachments */
@@ -316,15 +332,16 @@ body {
 
 body, input, textarea {
 	color: #373737;
-	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 15px Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	line-height: 1.625;
 }
 body {
-	background: #e2e2e2;
+	background: #fafafa;
+
 }
 #page {
-	background: #fff;
+	background:  #fff;
 }
 
 /* Headings */
@@ -346,7 +363,7 @@ ul, ol {
 	margin: 0 0 1.625em 2.5em;
 }
 ul {
-	list-style: square;
+	list-style: none;
 }
 ol {
 	list-style-type: decimal;
@@ -379,7 +396,7 @@ cite, em, i {
 	font-style: italic;
 }
 blockquote {
-	font-family: Georgia, "Bitstream Charter", serif;
+	font-family: helvetica, sans-serif;
 	font-style: italic;
 	font-weight: normal;
 	margin: 0 3em;
@@ -396,7 +413,7 @@ blockquote cite {
 }
 pre {
 	background: #f4f4f4;
-	font: 13px "Courier 10 Pitch", Courier, monospace;
+	font: 13px "Helvetica", Courier, monospace;
 	line-height: 1.5;
 	margin-bottom: 1.625em;
 	overflow: auto;
@@ -436,11 +453,8 @@ sub {
 input[type=text],
 input[type=password],
 textarea {
-	background: #fafafa;
-	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-	border: 1px solid #ddd;
+	background: #fff;
+	border: 1px solid #efefef;
 	color: #888;
 }
 input[type=text]:focus,
@@ -456,8 +470,6 @@ input[type=text] {
 }
 input#s {
 	background: url(images/search.png) no-repeat 5px 6px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
 	font-size: 14px;
 	height: 22px;
 	line-height: 1.2em;
@@ -501,8 +513,20 @@ a:hover {
 /* =Header
 ----------------------------------------------- */
 
+#spuulLogo{
+	margin: 0px auto;
+	width: 1000px;
+	height: 50px;
+	background: #242424;
+}
+
+#spuulLogo img{
+	position: relative;
+	top: 5px;
+	background: #242424;
+}
+
 #branding {
-	border-top: 2px solid #bbb;
 	padding-bottom: 10px;
 	position: relative;
 	z-index: 9999;
@@ -683,7 +707,8 @@ a:hover {
 
 #main {
 	clear: both;
-	padding: 1.625em 0 0;
+	/*padding: 1.625em 0 0;*/
+	padding: 0;
 }
 .page-title {
 	color: #666;
@@ -702,9 +727,7 @@ a:hover {
 }
 .hentry,
 .no-results {
-	border-bottom: 1px solid #ddd;
-	margin: 0 0 1.625em;
-	padding: 0 0 1.625em;
+	margin: 0px 0 20px;
 	position: relative;
 }
 .hentry:last-child,
@@ -723,16 +746,21 @@ a:hover {
 .entry-title {
 	clear: both;
 	color: #222;
-	font-size: 26px;
+	font-size: 30px;
 	font-weight: bold;
 	line-height: 1.5em;
-	padding-bottom: .3em;
-	padding-top: 15px;
+	padding-bottom: 0em;
+	padding-top: 0px;
 }
 .entry-title,
 .entry-title a {
-	color: #222;
+	font-family: 'Source Sans Pro', helvetica, sans-serif;
+	color: #4c4c4c;
 	text-decoration: none;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 1.0;
+	margin: 0 0 10px 0;
 }
 .entry-title a:hover,
 .entry-title a:focus,
@@ -746,14 +774,18 @@ a:hover {
 	line-height: 18px;
 }
 .entry-meta a {
-	font-weight: bold;
+	color: #999;
+	font-size: 14px;
+	font-family: 'Source Sans Pro', helvetica, sans-serif;
+	font-weight: 500;
 }
 .single-author .entry-meta .by-author {
 	display: none;
 }
 .entry-content,
 .entry-summary {
-	padding: 1.625em 0 0;
+	border-top: 1px #efefef solid;
+	padding: 1.33em 0 0;
 }
 .entry-content h1,
 .entry-content h2,
@@ -828,9 +860,8 @@ dl.gallery-item {
 }
 .entry-meta .edit-link a,
 .commentlist .edit-link a {
-	background: #eee;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	border: thin #efefef solid;
+	background: #fff;
 	color: #666;
 	float: right;
 	font-size: 12px;
@@ -853,7 +884,7 @@ dl.gallery-item {
 .entry-content img,
 .comment-content img,
 .widget img {
-	max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
 }
 img[class*="align"],
 img[class*="wp-image-"],
@@ -862,9 +893,8 @@ img[class*="attachment-"] {
 }
 img.size-full,
 img.size-large {
-	max-width: 97.5%;
-	width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+	/*max-width: 97.5%;*/
+	width: 100%; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
 }
 .entry-content img.wp-smiley {
 	border: none;
@@ -895,7 +925,7 @@ p img,
 .wp-caption .wp-caption-text,
 .gallery-caption {
 	color: #666;
-	font-family: Georgia, serif;
+	font-family: helvetica, sans-serif;
 	font-size: 12px;
 }
 .wp-caption .wp-caption-text {
@@ -937,8 +967,7 @@ img#wpstats {
 img[class*="align"],
 img[class*="wp-image-"],
 #content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
-	border: 1px solid #ddd;
-	padding: 6px;
+	border: 1px solid #fff;
 }
 .wp-caption img {
 	border-color: #eee;
@@ -952,14 +981,14 @@ a:active img[class*="wp-image-"],
 #content .gallery .gallery-icon a:focus img,
 #content .gallery .gallery-icon a:hover img,
 #content .gallery .gallery-icon a:active img {/* Add some useful style to those fancy borders for linked images ... */
-	background: #eee;
-	border-color: #bbb;
+	background: #fff;
+	border-color: #fff;
 }
 .wp-caption a:focus img,
 .wp-caption a:active img,
 .wp-caption a:hover img {/* ... including captioned images! */
 	background: #fff;
-	border-color: #ddd;
+	border-color: #fff;
 }
 
 /* Make sure embeds and iframes fit their containers */
@@ -1023,7 +1052,8 @@ object {
 
 /* Comments link */
 .entry-header .comments-link a {
-	background: #eee url(images/comment-bubble.png) no-repeat;
+	display: none;
+	background: url(images/comment-bubble.png) no-repeat;
 	color: #666;
 	font-size: 13px;
 	font-weight: normal;
@@ -1092,10 +1122,13 @@ article.format-status .entry-content {
 	padding: 3.5em 0 0;
 }
 .singular .entry-title {
-	color: #000;
-	font-size: 36px;
-	font-weight: bold;
-	line-height: 48px;
+	font-family: 'Source Sans Pro', helvetica, sans-serif;
+	color: #4c4c4c;
+	text-decoration: none;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 1.0;
+	margin: 0 0 10px 0;
 }
 .singular .entry-title,
 .singular .entry-header .entry-meta {
@@ -1140,10 +1173,10 @@ blockquote.pull.alignright {
 }
 .singular .entry-meta .edit-link a {
 	bottom: auto;
-	left: 50px;
+	left: 0px;
 	position: absolute;
 	right: auto;
-	top: 80px;
+	top: 50px;
 }
 
 
@@ -1698,6 +1731,7 @@ section.recent-posts .other-recent-posts li:after {
 	padding: 0 0 1.625em;
 }
 #content nav a {
+	text-decoration: underline;
 	font-size: 12px;
 	font-weight: bold;
 	line-height: 2.2em;
@@ -1755,9 +1789,10 @@ section.recent-posts .other-recent-posts li:after {
 	margin: 0 0 2.2em;
 }
 .widget-title {
-	color: #666;
-	font-size: 10px;
-	font-weight: 500;
+	font-weight: bold;
+	font-family: 'Source Sans Pro', helvetica, sans-serif;
+	color: #4c4c4c;
+	font-size: 12px;
 	letter-spacing: 0.1em;
 	line-height: 2.6em;
 	text-transform: uppercase;
@@ -1770,11 +1805,15 @@ section.recent-posts .other-recent-posts li:after {
 	margin-left: 1.5em;
 }
 .widget ul li {
+	padding: 5px 0 0;
+	border-bottom: 1px #efefef solid;
 	color: #777;
 	font-size: 13px;
 }
 .widget a {
-	font-weight: bold;
+	font-family: helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
 	text-decoration: none;
 }
 .widget a:hover,
@@ -1788,7 +1827,7 @@ section.recent-posts .other-recent-posts li:after {
 	margin: 0 0 1.625em;
 }
 .widget_search #s {
-	width: 77%;
+	width: 85%;
 }
 .widget_search #searchsubmit {
 	background: #ddd;
@@ -1895,9 +1934,9 @@ section.ephemera .entry-title a span {
 #comments-title {
 	color: #666;
 	font-size: 10px;
-	font-weight: 500;
-	line-height: 2.6em;
-	padding: 0 0 2.6em;
+	font-weight: normal;
+	line-height: 2em;
+	padding: 0 0 2em;
 	text-transform: uppercase;
 }
 .nopassword,
@@ -1911,7 +1950,7 @@ section.ephemera .entry-title a span {
 .commentlist {
 	list-style: none;
 	margin: 0 auto;
-	width: 68.9%;
+	width: 100%;
 }
 .content .commentlist,
 .page-template-sidebar-page-php .commentlist {
@@ -1919,11 +1958,9 @@ section.ephemera .entry-title a span {
 }
 .commentlist > li.comment {
 	background: #f6f6f6;
-	border: 1px solid #ddd;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	margin: 0 0 1.625em;
-	padding: 1.625em;
+	border-bottom: 1px #efefef solid;
+	margin: 0 0 1em;
+	padding: 1em;
 	position: relative;
 }
 .commentlist .pingback {
@@ -1937,8 +1974,6 @@ section.ephemera .entry-title a span {
 .commentlist .children li.comment {
 	background: #fff;
 	border-left: 1px solid #ddd;
-	-moz-border-radius: 0 3px 3px 0;
-	border-radius: 0 3px 3px 0;
 	margin: 1.625em 0 0;
 	padding: 1.625em;
 	position: relative;
@@ -1952,7 +1987,7 @@ section.ephemera .entry-title a span {
 .comment-meta {
 	color: #666;
 	font-size: 12px;
-	line-height: 2.2em;
+	line-height: 1.5em;
 }
 .commentlist .children li.comment .comment-meta {
 	line-height: 1.625em;
@@ -1980,6 +2015,7 @@ section.ephemera .entry-title a span {
 	top: 0;
 }
 .commentlist > li:before {
+	display: none;
 	content: url(images/comment-arrow.png);
 	left: -21px;
 	position: absolute;
@@ -1992,14 +2028,12 @@ section.ephemera .entry-title a span {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-	left: 2.2em;
+	left: 1.8em;
 	padding: 0;
-	top: 2.2em;
+	top: 1.8em;
 }
 a.comment-reply-link {
-	background: #eee;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	border: 1px #efefef solid;
 	color: #666;
 	display: inline-block;
 	font-size: 12px;
@@ -2020,8 +2054,8 @@ a.comment-reply-link > span {
 
 /* Post author highlighting */
 .commentlist > li.bypostauthor {
-	background: #ddd;
-	border-color: #d3d3d3;
+	background: #fff;
+	border-bottom: 1px #efefef solid;
 }
 .commentlist > li.bypostauthor .comment-meta {
 	color: #575757;
@@ -2054,24 +2088,15 @@ a.comment-reply-link > span {
 
 /* Comment Form */
 #respond {
-	background: #ddd;
-	border: 1px solid #d3d3d3;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	background: #fff;
 	margin: 0 auto 1.625em;
-	padding: 1.625em;
 	position: relative;
-	width: 68.9%;
+	width: 100%;
 }
 #respond input[type="text"],
 #respond textarea {
 	background: #fff;
-	border: 4px solid #eee;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: inset 0 1px 3px rgba(204,204,204,0.95);
-	-moz-box-shadow: inset 0 1px 3px rgba(204,204,204,0.95);
-	box-shadow: inset 0 1px 3px rgba(204,204,204,0.95);
+	border: 1px solid #efefef;
 	position: relative;
 	padding: 10px;
 	text-indent: 80px;
@@ -2086,18 +2111,12 @@ a.comment-reply-link > span {
 #respond .comment-form-email label,
 #respond .comment-form-url label,
 #respond .comment-form-comment label {
-	background: #eee;
-	-webkit-box-shadow: 1px 2px 2px rgba(204,204,204,0.8);
-	-moz-box-shadow: 1px 2px 2px rgba(204,204,204,0.8);
-	box-shadow: 1px 2px 2px rgba(204,204,204,0.8);
-	color: #555;
+	background: #fff;
+	color: #666;
 	display: inline-block;
 	font-size: 13px;
-	left: 4px;
 	min-width: 60px;
-	padding: 4px 10px;
 	position: relative;
-	top: 40px;
 	z-index: 1;
 }
 #respond input[type="text"]:focus,
@@ -2124,28 +2143,21 @@ a.comment-reply-link > span {
 	font-size: 13px;
 }
 #respond p {
-	margin: 10px 0;
+	margin: 0px 0 10px;
 }
 #respond .form-submit {
 	float: right;
 	margin: -20px 0 10px;
 }
 #respond input#submit {
-	background: #222;
-	border: none;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	color: #eee;
+	background: #fff;
+	border: 1px #efefef solid;
+	color: #888;
 	cursor: pointer;
-	font-size: 15px;
-	margin: 20px 0;
-	padding: 5px 42px 5px 22px;
+	font-size: 12px;
+	margin: 0px 10px 20px 0;
+	padding: 5px 20px;
 	position: relative;
-	left: 30px;
-	text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
 }
 #respond input#submit:active {
 	background: #1982d1;
@@ -2165,9 +2177,10 @@ a.comment-reply-link > span {
 	width: auto;
 }
 #reply-title {
-	color: #373737;
-	font-size: 24px;
-	font-weight: bold;
+	font-family: helvetica, sans-serif;
+	color: #333;
+	font-size: 18px;
+	font-weight: normal;
 	line-height: 30px;
 }
 #cancel-comment-reply-link {
@@ -2212,6 +2225,7 @@ p.comment-form-comment {
 
 #colophon {
 	clear: both;
+	background: rgba(0,0,0,0.0);
 }
 #supplementary {
 	border-top: 1px solid #ddd;
@@ -2241,17 +2255,15 @@ p.comment-form-comment {
 
 /* Site Generator Line */
 #site-generator {
-	background: #f9f9f9;
-	border-top: 1px solid #ddd;
-	color: #666;
+	color: #999;
 	font-size: 12px;
 	line-height: 2.2em;
-	padding: 2.2em 0.5em;
+	padding: 1em 0.5em;
 	text-align: center;
 }
 #site-generator a {
-	color: #555;
-	font-weight: bold;
+	color: #333;
+	font-weight: 300;
 }
 
 
@@ -2260,19 +2272,35 @@ p.comment-form-comment {
 
 @media (max-width: 800px) {
 	/* Simplify the basic layout */
+	body {
+	padding: 0 0px;
+}
+
 	#main #content {
 		margin: 0 7.6%;
 		width: auto;
 	}
+
+	#primary{
+		width: 100%;
+	}
+
+
 	#nav-below {
 		border-bottom: 1px solid #ddd;
 		margin-bottom: 1.625em;
 	}
+
 	#main #secondary {
 		float: none;
-		margin: 0 7.6%;
+		margin: 0 auto;
 		width: auto;
 	}
+
+	#secondary .padding{
+	padding: 0px 30px;
+}
+
 	/* Simplify the showcase template */
 	.page-template-showcase-php .featured-posts {
 		min-height: 280px;
@@ -2350,7 +2378,7 @@ p.comment-form-comment {
 	}
 	.commentlist > li.comment,
 	.commentlist .pingback {
-		margin-left: 102px;
+		margin-left: 0px;
 		width: auto;
 	}
 	/* And a full-width comment form */
