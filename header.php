@@ -44,7 +44,7 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-<!-- REQUIRED FOR PARALLAX 
+ <!-- REQUIRED FOR PARALLAX -->
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.6.4.min.js" ></script>
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('template_url'); ?>/js/jquery.jparallax.min.js" ></script>
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('template_url'); ?>/js/jquery.event.frame.js" ></script>
@@ -60,7 +60,7 @@ jQuery(document).ready(function()
 
 });
 </script>  
- /REQUIRED FOR PARALLAX -->
+ <!--REQUIRED FOR PARALLAX --> 
 
 
 
@@ -92,14 +92,16 @@ jQuery(document).ready(function()
 	<header id="branding" role="banner">
 		<!-- parallax -->
 
-		<!-- REQUIRED FOR PARALLAX 
+		 <!-- REQUIRED FOR PARALLAX 
 		<div id="parallax" class="clear">
-
-		   <div class="parallax-layer" style="width:100%; height:288px;">
-				<img src="<?php bloginfo('template_directory'); ?>/images/para5.png" alt="" style="width:100%; height:288px;"/>
+		   <div class="parallax-layer" style="width:1020px; height:288px;">
+				<img src="<?php bloginfo('template_directory'); ?>/images/headerBg.jpg" alt="" style="width:1010px; height:288px;"/>
+		   </div>
+		    <div class="parallax-layer" style="width:950px; height:268px;">
+				<img src="<?php bloginfo('template_directory'); ?>/images/spuul.png" alt="" style="width:1000px; height:288px;"/>
 		   </div>
 		</div>
-		 /REQUIRED FOR PARALLAX -->
+		 <!--/REQUIRED FOR PARALLAX -->
 
 			<hgroup>
 				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
