@@ -469,8 +469,7 @@ input[type=text] {
 	padding: 3px;
 }
 input#s {
-	background-image: url(images/search.png);
-	background-position: left center;
+	background: url(images/search.png) 4px 5px;
 	background-repeat: no-repeat;
 	font-size: 14px;
 	height: 22px;
@@ -1800,6 +1799,7 @@ section.recent-posts .other-recent-posts li:after {
 	letter-spacing: 0.1em;
 	line-height: 2.6em;
 	text-transform: uppercase;
+	border-bottom: 1px #efefef solid;
 }
 .widget ul {
 	font-size: 15px;
@@ -1810,7 +1810,7 @@ section.recent-posts .other-recent-posts li:after {
 }
 .widget ul li {
 	padding: 5px 0 0;
-	border-bottom: 1px #efefef solid;
+	margin: 0 0 0 15px;
 	color: #777;
 	font-size: 13px;
 }
