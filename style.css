@@ -22,10 +22,10 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: helvetica, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 100%;
 	font-style: inherit;
-	font-weight: inherit;
+	font-weight: 400;
 	margin: 0;
 	outline: 0;
 	padding: 0;
@@ -761,7 +761,7 @@ a:hover {
 	color: #4c4c4c;
 	text-decoration: none;
 	font-weight: 300;
-	font-size: 40px;
+	font-size: 30px;
 	line-height: 1.0;
 	margin: 0 0 10px 0;
 }
@@ -773,14 +773,14 @@ a:hover {
 .entry-meta {
 	color: #666;
 	clear: both;
-	font-size: 12px;
+	font-size: 16px;
 	line-height: 18px;
 }
 .entry-meta a {
-	color: #999;
-	font-size: 14px;
-	font-family: 'Source Sans Pro', helvetica, sans-serif;
-	font-weight: 500;
+	color: #ab302a;
+	font-size: 16px;
+	font-family: helvetica, sans-serif;
+	font-weight: 300;
 }
 .single-author .entry-meta .by-author {
 	display: none;
@@ -2302,7 +2302,7 @@ p.comment-form-comment {
 	}
 
 	#secondary .padding{
-	padding: 0px 30px;
+	padding: 0px 7.6%;
 }
 
 	/* Simplify the showcase template */
