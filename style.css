@@ -773,9 +773,13 @@ a:hover {
 .entry-meta {
 	color: #666;
 	clear: both;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 18px;
 	margin: 0px 0 0.7em;
+}
+
+footer.entry-meta{
+	margin: 0 0 4.7em;
 }
 .entry-meta a {
 	color: #ab302a;
