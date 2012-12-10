@@ -45,9 +45,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 
  <!-- REQUIRED FOR PARALLAX -->
-<script type="text/javascript" language="JavaScript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.6.4.min.js" ></script>
-<script type="text/javascript" language="JavaScript" src="<?php bloginfo('template_url'); ?>/js/jquery.jparallax.min.js" ></script>
-<script type="text/javascript" language="JavaScript" src="<?php bloginfo('template_url'); ?>/js/jquery.event.frame.js" ></script>
+<script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.6.4.min.js" ></script>
+<script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.jparallax.min.js" ></script>
+<script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.event.frame.js" ></script>
 
 <script type="text/javascript">
 jQuery(document).ready(function() 
@@ -56,8 +56,6 @@ jQuery(document).ready(function()
 	.parallax({
 		mouseport: $('#parallax')
 	});
-});
-
 });
 </script>  
  <!--REQUIRED FOR PARALLAX --> 
@@ -90,14 +88,13 @@ jQuery(document).ready(function()
 <div id="page" class="hfeed">
 	<!--<div id="spuulLogo"><img style="height: 40px;" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2012/11/spuul_white_transparent.png" alt="Spuul logo" /></div> -->
 	<header id="branding" role="banner">
-		<!-- parallax -->
 
-		 <!-- REQUIRED FOR PARALLAX 
+		<!-- parallax -->
 		<div id="parallax" class="clear">
-		   <div class="parallax-layer" style="width:1020px; height:288px;">
-				<img src="<?php bloginfo('template_directory'); ?>/images/headerBg.jpg" alt="" style="width:1010px; height:288px;"/>
+		   <div class="parallax-layer" style="width:1010px; height:298px;">
+				<img src="<?php bloginfo('template_directory'); ?>/images/headerBg.jpg" alt="" style="width:1040px; height:288px;"/>
 		   </div>
-		    <div class="parallax-layer" style="width:950px; height:268px;">
+		    <div class="parallax-layer" style="width:1030px; height:308px;">
 				<img src="<?php bloginfo('template_directory'); ?>/images/spuul.png" alt="" style="width:1000px; height:288px;"/>
 		   </div>
 		</div>
