@@ -91,10 +91,10 @@ jQuery(document).ready(function()
 
 		<!-- parallax -->
 		<div id="parallax" class="clear">
-		   <div class="parallax-layer" style="width:1010px; height:298px;">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/headerBg.jpg" alt="" style="width:1040px; height:288px;"/>
+		   <div class="parallax-layer" style="width:1040px; height:316px;">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/headerBg.jpg" alt="" style="width:1040px; height:318px;"/>
 		   </div>
-		    <div class="parallax-layer" style="width:1030px; height:308px;">
+		    <div class="parallax-layer" style="width:1020px; height:308px;">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/spuul.png" alt="" style="width:1000px; height:288px;"/>
 		   </div>
 		</div>
