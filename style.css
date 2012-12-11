@@ -65,8 +65,7 @@ footer, header, hgroup, menu, nav, section {
 
 /* Parallax */
  #parallax-header { height:200px; background-color:gray;  }
- #parallax {position:relative; overflow:hidden; width:100%; height:288px;
-	background-image:url('images/para1.png');
+ #parallax {position:relative; overflow:hidden; width:100%; height:288px; display: block;
  }
 .parallax-viewport {
     position: relative;     /* relative, absolute, fixed */
@@ -555,10 +554,14 @@ a:hover {
 	font-size: 14px;
 	margin: 0 270px 3.65625em 0;
 }
-#branding img {
+#branding img{
 	height: auto;
 	margin-bottom: -7px;
 	width: 100%;
+}
+
+#bannerImg{
+	display: none;
 }
 
 
@@ -2290,6 +2293,14 @@ p.comment-form-comment {
 		width: auto;
 	}
 
+	#bannerImg{
+		display: block;
+	}
+
+	#parallax{
+		display: none;
+	}
+
 	#primary{
 		width: 100%;
 	}
@@ -2417,6 +2428,15 @@ p.comment-form-comment {
 	#site-title a {
 		font-size: 24px;
 	}
+
+	#bannerImg{
+		display: block;
+	}
+
+	#parallax{
+		display: none;
+	}
+
 	#site-description {
 		font-size: 15px;
 	}
@@ -2512,6 +2532,14 @@ p.comment-form-comment {
 
 }
 @media (max-width: 450px) {
+	#bannerImg{
+		display: block;
+	}
+
+	#parallax{
+		display: none;
+	}
+
 	#content .gallery-columns-2 .gallery-item {
 		width: 45%;
 		padding-right: 4%;
@@ -2531,6 +2559,13 @@ p.comment-form-comment {
 	}
 	#branding {
 		border-top: none;
+	}
+	#bannerImg{
+		display: block;
+	}
+
+	#parallax{
+		display: none;
 	}
 
 }

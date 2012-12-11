@@ -90,14 +90,14 @@ jQuery(document).ready(function()
 	<header id="branding" role="banner">
 
 		<!-- parallax -->
-		<div id="parallax" class="clear">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><div id="parallax" class="clear">
 		   <div class="parallax-layer" style="width:1040px; height:316px;">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/headerBg.jpg" alt="" style="width:1040px; height:318px;"/>
 		   </div>
 		    <div class="parallax-layer" style="width:1020px; height:308px;">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/spuul.png" alt="" style="width:1000px; height:288px;"/>
 		   </div>
-		</div>
+		</div></a>
 		 <!--/REQUIRED FOR PARALLAX -->
 
 			<hgroup>
@@ -137,7 +137,7 @@ jQuery(document).ready(function()
 							$header_image_height = HEADER_IMAGE_HEIGHT;
 						}
 						?>
-					<img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
+					<img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" id="bannerImg"/>
 				<?php endif; // end check for featured image or standard header ?>
 			</a>
 			<?php endif; // end check for removed header image ?>
