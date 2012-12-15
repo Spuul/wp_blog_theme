@@ -1064,7 +1064,7 @@ object {
 /* Comments link */
 .entry-header .comments-link a {
 	display: none;
-	background: url(images/comment-bubble.png) no-repeat;
+	background: url(../twentyeleven/images/comment-bubble.png) no-repeat;
 	color: #666;
 	font-size: 13px;
 	font-weight: normal;
@@ -2028,7 +2028,7 @@ section.ephemera .entry-title a span {
 }
 .commentlist > li:before {
 	display: none;
-	content: url(images/comment-arrow.png);
+	content: url(../twentyeleven/images/comment-arrow.png);
 	left: -21px;
 	position: absolute;
 }
@@ -2077,7 +2077,7 @@ a.comment-reply-link > span {
 .commentlist > li.bypostauthor .comment-meta a:hover {
 }
 .commentlist > li.bypostauthor:before {
-	content: url(images/comment-arrow-bypostauthor.png);
+	content: url(../twentyeleven/images/comment-arrow-bypostauthor.png);
 }
 
 /* Post Author threaded comments */
