@@ -7,14 +7,22 @@
 	<div class="content_padding">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
+			<div class="ribbon_end1"></div>
 			<div class="ribbon_tail"></div>
 				<?php if ( is_sticky() ) : ?>
 					<hgroup>
+
 						<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 						<h3 class="entry-format"><?php _e( 'Featured', 'twentyeleven' ); ?></h3>
 					</hgroup>
 				<?php else : ?>
-				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+					<h1 class="entry-title">
+						<div class="ribbon">
+							<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+							<div class="ribbon_end2"></div>
+						</div>
+					</h1>
+			
 				<?php endif; ?>
 
 				<?php if ( 'post' == get_post_type() ) : ?>

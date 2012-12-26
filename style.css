@@ -76,9 +76,13 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .ribbon_tail{
-	width: 70px;
+	width: 90px;
 	height: 70px;
 	background: url('images/ribbon_end.png');
+	position: absolute;
+	left:-90px;
+	top: -15px;
+	z-index: 10;
 }
 
 
@@ -771,16 +775,52 @@ a:hover {
 	line-height: 1.5em;
 	padding-bottom: 0em;
 	padding-top: 0px;
+
 }
+
+.ribbon{
+}
+
+.ribbon a{
+	background: url('images/ribbon_bg.jpg') repeat-x center;
+	padding: 20px 0;
+	color:#e0d7d7;
+	position: relative;
+	top: -15px;
+	float: left;
+	z-index: 10;
+}
+
+.ribbon_end1{
+	width: 90px;
+	height: 70px;
+	background: url('images/ribbon_end1.png');
+	position: absolute;
+	left:-90px;
+	top: -15px;
+	z-index: 1;
+}
+
+.ribbon_end2{
+	background: url('images/ribbon_end2.png') no-repeat;
+	width: 90px;
+	height: 70px;
+	float: left;
+	position: relative;
+	top: -15px;
+	z-index: 10;
+}
+
+
 .entry-title,
 .entry-title a {
 	font-family: 'Source Sans Pro', helvetica, sans-serif;
-	color: #4c4c4c;
+	color: #fff;
 	text-decoration: none;
 	font-weight: 300;
 	font-size: 30px;
-	line-height: 1.0;
-	margin: 0 0 10px 0;
+	line-height: 1;
+	margin: 0 0 15px 0;
 }
 .entry-title a:hover,
 .entry-title a:focus,

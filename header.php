@@ -48,7 +48,7 @@
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.6.4.min.js" ></script>
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.jparallax.min.js" ></script>
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.event.frame.js" ></script>
-
+<script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/manual.js"></script>
 <script type="text/javascript">
 jQuery(document).ready(function() 
 {
