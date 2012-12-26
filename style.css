@@ -116,6 +116,7 @@ body {
 	padding: 20px 20px;
 	background: #ffffff;
 	margin: 15px 0 0;
+	box-shadow: 1px 1px 10px #888;
 }
 #secondary {
 	margin: 70px 0 0 0;
@@ -783,10 +784,10 @@ a:hover {
 
 .ribbon a{
 	background: url('images/ribbon_bg.jpg') repeat-x center;
-	padding: 20px 0;
+	padding: 20px 0 30px;
 	color:#e0d7d7;
 	position: relative;
-	top: -15px;
+	top: -20px;
 	float: left;
 	z-index: 10;
 }
@@ -820,7 +821,7 @@ a:hover {
 	font-weight: 300;
 	font-size: 30px;
 	line-height: 1;
-	margin: 0 0 15px 0;
+	margin: 0 0 0px 0;
 }
 .entry-title a:hover,
 .entry-title a:focus,
@@ -2321,11 +2322,13 @@ p.comment-form-comment {
 
 /* Site Generator Line */
 #site-generator {
-	color: #999;
-	font-size: 12px;
+	font-size: 14px;
+	font-weight: 400;
 	line-height: 2.2em;
 	padding: 1em 0.5em;
 	text-align: center;
+	color: #333;
+	text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
 }
 #site-generator a {
 	color: #333;

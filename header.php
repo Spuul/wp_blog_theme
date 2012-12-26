@@ -94,6 +94,9 @@ jQuery(document).ready(function()
 		   <div class="parallax-layer" style="width:1040px; height:316px;">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/headerBg.jpg" alt="" style="width:1040px; height:318px;"/>
 		   </div>
+		   <div class="parallax-layer" style="width:1020px; height:308px;">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/spuul_shadow.png" alt="" style="width:1000px; height:288px;"/>
+		   </div>
 		    <div class="parallax-layer" style="width:1020px; height:308px;">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/spuul.png" alt="" style="width:1000px; height:288px;"/>
 		   </div>
