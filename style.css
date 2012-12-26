@@ -75,6 +75,12 @@ footer, header, hgroup, menu, nav, section {
     position: absolute;
 }
 
+.ribbon_tail{
+	width: 70px;
+	height: 70px;
+	background: url('images/ribbon_end.png');
+}
+
 
 /* =Structure
 ----------------------------------------------- */
@@ -84,7 +90,7 @@ body {
 	padding: 0 30px;
 }
 #page {
-	margin: 0 auto;
+	margin: 50px auto 10px;
 	max-width: 1000px;
 }
 #branding hgroup {
@@ -99,7 +105,13 @@ body {
 	width: 70%;
 }
 #content {
+
+}
+
+.content_padding{
+	padding: 20px 20px;
 	background: #ffffff;
+	margin: 15px 0 0;
 }
 #secondary {
 	margin: 70px 0 0 0;
@@ -341,7 +353,7 @@ body {
 
 }
 #page {
-
+	background: url('images/mainBg.jpg') repeat;
 }
 
 /* Headings */
@@ -469,7 +481,7 @@ input[type=text] {
 	padding: 3px;
 }
 input#s {
-	background: url(images/search.png) 4px 5px;
+	background: url(images/search.png) 4px 5px #fff;
 	background-repeat: no-repeat;
 	font-size: 14px;
 	height: 22px;
@@ -530,7 +542,7 @@ a:hover {
 }
 
 #branding {
-	padding-bottom: 25px;
+	padding-bottom: 0px;
 	position: relative;
 	z-index: 9999;
 }
@@ -784,7 +796,7 @@ a:hover {
 }
 
 footer.entry-meta{
-	margin: 0 0 4.7em;
+	margin: 0 0 0 0em;
 }
 .entry-meta a {
 	color: #ab302a;
