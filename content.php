@@ -59,7 +59,7 @@
 				if ( $categories_list ):
 			?>
 			<span class="cat-links">
-				<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list );
+				<?php printf( __( '<span class="%1$s"></span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list );
 				$show_sep = true; ?>
 			</span>
 			<?php endif; // End if categories ?>

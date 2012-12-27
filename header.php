@@ -86,9 +86,12 @@ jQuery(document).ready(function()
 
 <body <?php body_class(); ?>
 <div id="page" class="hfeed">
-	<!--<div id="spuulLogo"><img style="height: 40px;" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2012/11/spuul_white_transparent.png" alt="Spuul logo" /></div> -->
+	<a href="http://www.spuul.com" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/smallSpuul.png" alt="spuul logo" width="100px" height="42px" class="spuul_logo"/></a>
+		
 	<header id="branding" role="banner">
-
+		<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
+		<?php get_search_form(); ?>
+	</div>
 		<!-- parallax -->
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><div id="parallax" class="clear">
 		   <div class="parallax-layer" style="width:1040px; height:316px;">
@@ -149,9 +152,7 @@ jQuery(document).ready(function()
 				// Has the text been hidden?
 				if ( 'blank' == get_header_textcolor() ) :
 			?>
-				<!--<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
-				<?php get_search_form(); ?>
-				</div>-->
+				
 			<?php
 				else :
 			?>
