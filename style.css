@@ -367,8 +367,7 @@ body {
 
 }
 #page {
-	/*background: url('images/mainBg.jpg') repeat;*/
-	background: #f2f2f2;
+	background: url('images/mainBg.jpg') repeat #f2f2f2;
 }
 
 /* Headings */
