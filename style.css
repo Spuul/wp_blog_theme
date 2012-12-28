@@ -126,7 +126,7 @@ body {
 	box-shadow: 1px 1px 10px #999;
 }
 #secondary {
-	margin: 70px 0 0 0;
+	margin: 10px 0 0 0;
 	/*padding: 2%;*/
 	float: left;
 	/*margin-right: 2%;*/
@@ -785,6 +785,10 @@ a:hover {
 	padding-bottom: 0em;
 	padding-top: 0px;
 
+}
+
+.ribbon{
+	display: inline-block;
 }	
 
 .ribbon a{
@@ -792,9 +796,9 @@ a:hover {
 	padding: 21px 0 30px;
 	color:#e0d7d7;
 	position: relative;
-	top: -8px;
-	float: left;
+	top: -3px;
 	z-index: 10;
+	float: left;
 }
 
 .ribbon_end1{
@@ -824,7 +828,7 @@ a:hover {
 	color: #fff;
 	text-decoration: none;
 	font-weight: 300;
-	font-size: 30px;
+	font-size: 20px;
 	line-height: 1;
 	margin: 0 0 0px 0;
 	text-shadow: -1px -1px 0px rgba(0,0,0,.5); /* 50% white from bottom */
@@ -2638,10 +2642,10 @@ p.comment-form-comment {
 	.entry-title a {
 		top: -3px;
 		font-family: 'Source Sans Pro', helvetica, sans-serif;
-		color: #AB302A;
+		color: #444;
 		text-decoration: none;
-		font-weight: 300;
-		font-size: 20px;
+		font-weight: 500;
+		font-size: 30px;
 		line-height: 1;
 		margin: 0 0 0px 0;
 	}

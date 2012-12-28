@@ -2,9 +2,9 @@ $(document).ready(function(){
 	/* Ribbon Animation */
 	var ribbon = $('.ribbon a');
 	$(ribbon).hover(function(){
-		$(this).animate({width: '+=11'},250);
+		$(this).animate({width: '+=8'},250);
 	},function(){
-		$(this).animate({width: '-=10'},250);
+		$(this).animate({width: '-=7'},250);
 	});
 });
 
