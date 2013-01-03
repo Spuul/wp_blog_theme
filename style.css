@@ -114,7 +114,7 @@ body {
 	border: #fefefe 1px solid;
 	padding: 20px 20px;
 	background: #ffffff;
-	margin: 0px 0 10px;
+	margin: 10px 0 10px;
 	box-shadow: 1px 1px 5px #ddd;
 }
 #secondary {
@@ -383,14 +383,6 @@ body {
 #logo_menu #spuul_menu li a:hover{
 	text-decoration: none;
 }
-
-#spuul_bg{
-	position: absolute;
-	width: 646px;
-	height: 436px;
-	background:  no-repeat;
-}
-
 /* =Global
 ----------------------------------------------- */
 
@@ -405,9 +397,11 @@ body {
 
 }
 #page {
-	background-image: url('images/spuul_bg.jpg'), url('images/mainBg.jpg');
+	background-image: url(images/spuul_bg.jpg), url(images/mainBg.jpg);
 	background-position: center top, left top;
-	background-repeat: no-repeat, repeat; 
+	background-repeat: no-repeat,repeat;
+	background-attachment: fixed;
+}
 }
 
 /* Headings */
