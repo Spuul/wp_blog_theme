@@ -75,16 +75,6 @@ footer, header, hgroup, menu, nav, section {
     position: absolute;
 }
 
-.ribbon_tail{
-	width: 90px;
-	height: 70px;
-	background: url('images/ribbon_end.png');
-	position: absolute;
-	left:-90px;
-	top: 0px;
-	z-index: 10;
-}
-
 .spuul_logo{
 	margin: 10px 0 10px;
 	position: relative;
@@ -367,7 +357,7 @@ body {
 
 }
 #page {
-	background: url('images/mainBg.jpg') repeat #f2f2f2;
+	background: url('images/mainBg.jpg') repeat fixed;
 }
 
 /* Headings */
@@ -786,59 +776,24 @@ a:hover {
 	line-height: 1.5em;
 	padding-bottom: 0em;
 	padding-top: 0px;
-
+	font-weight: 400;
 }
-
-.ribbon{
-	display: inline-block;
-}	
-
-.ribbon a{
-	background: url('images/ribbon_bg.png') repeat-x center;
-	padding: 21px 0 30px;
-	color:#e0d7d7;
-	position: relative;
-	top: -3px;
-	z-index: 10;
-	float: left;
-}
-
-.ribbon_end1{
-	width: 90px;
-	height: 70px;
-	background: url('images/ribbon_end1.png');
-	position: absolute;
-	left:-90px;
-	top: 0px;
-	z-index: 1;
-}
-
-.ribbon_end2{
-	background: url('images/ribbon_end2.png') no-repeat;
-	width: 90px;
-	height: 70px;
-	float: left;
-	position: relative;
-	top: 0px;
-	z-index: 10;
-}
-
 
 .entry-title,
 .entry-title a {
 	font-family: 'Source Sans Pro', helvetica, sans-serif;
-	color: #fff;
+	color: #444;
 	text-decoration: none;
 	font-weight: 300;
-	font-size: 20px;
+	font-size: 30px;
 	line-height: 1;
-	margin: 0 0 0px 0;
-	text-shadow: -1px -1px 0px rgba(0,0,0,.5); /* 50% white from bottom */
+	margin: 0px 0px 10px 0;
+	text-shadow: 1px 1px 0px rgba(255,255,255,.2); /* 50% white from bottom */
 }
 .entry-title a:hover,
 .entry-title a:focus,
 .entry-title a:active {
-	color: #1982d1;
+	color: #b1b1b1;
 }
 .entry-meta {
 	color: #666;
@@ -1869,15 +1824,15 @@ section.recent-posts .other-recent-posts li:after {
 	margin: 0 0 2.2em;
 }
 .widget-title {
-	font-weight: bold;
+	font-weight: 500;
 	font-family: helvetica, sans-serif;
-	color: #4c4c4c;
+	color: #999;
 	font-size: 15px;
 	letter-spacing: 0.1em;
 	line-height: 2.6em;
 	text-transform: uppercase;
 	border-bottom: 1px #efefef solid;
-	text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
+	text-shadow: 0px -1px 0px rgba(0,0,0,.3); /* 50% white from bottom */
 }
 .widget ul {
 	font-size: 15px;
@@ -2378,10 +2333,9 @@ p.comment-form-comment {
 	.entry-title a {
 		top: -3px;
 		font-family: 'Source Sans Pro', helvetica, sans-serif;
-		color: #fff;
 		text-decoration: none;
 		font-weight: 300;
-		font-size: 20px;
+		font-size: 30px;
 		line-height: 1;
 		margin: 0 0 0px 0;
 		text-shadow: -1px -1px 0px rgba(0,0,0,.2); /* 50% white from bottom */
@@ -2650,22 +2604,6 @@ p.comment-form-comment {
 		font-size: 30px;
 		line-height: 1;
 		margin: 0 0 0px 0;
-	}
-
-	.ribbon_tail{
-		display: none;
-	}
-
-	.ribbon a{
-		background: #fff;
-	}
-
-	.ribbon_end1{
-		display: none
-	}
-
-	.ribbon_end2{
-		display: none;
 	}
 
 }
