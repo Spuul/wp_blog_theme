@@ -101,8 +101,14 @@ jQuery(document).ready(function()
 
 <body <?php body_class(); ?>
 <div id="page" class="hfeed">
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/smallSpuul.png" alt="spuul logo" width="100px" height="42px" class="spuul_logo"/></a>
-		
+	<div id="spuul_bg"></div>
+	<div id="logo_menu">
+		<img src="<?php bloginfo('stylesheet_directory'); ?>/images/smallSpuul.png" alt="spuul logo" width="100px" height="42px" class="spuul_logo"/>
+		<ul id="spuul_menu">
+			<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Blog</a></li>
+			<li><a href="http://www.spuul.com" target="_blank">Spuul.com</a></li>
+		</ul>
+	</div>
 	<header id="branding" role="banner">
 		<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
 			<?php get_search_form(); ?>

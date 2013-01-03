@@ -114,7 +114,7 @@ body {
 	border: #fefefe 1px solid;
 	padding: 20px 20px;
 	background: #ffffff;
-	margin: 10px 0 10px;
+	margin: 0px 0 10px;
 	box-shadow: 1px 1px 5px #ddd;
 }
 #secondary {
@@ -347,6 +347,49 @@ body {
 	position: relative;
 }
 
+#logo_menu{
+	position: relative;
+	width: 250px;
+	cursor: pointer;
+}
+
+#logo_menu img{
+	display: inline;
+	position: relative;
+	z-index: 2;
+}
+
+#logo_menu #spuul_menu{
+	display: block;
+	position: absolute;
+	left: -40px;
+	z-index: 3;
+	top: -75px;
+}
+
+#logo_menu #spuul_menu li{
+	display: inline;
+	margin: 0 2px;
+	padding: 8px 15px;
+	background: #000;
+	border-radius: 2px;
+}
+
+#logo_menu #spuul_menu li a{
+	color: #f01f01;
+	font-weight: bold;
+}
+
+#logo_menu #spuul_menu li a:hover{
+	text-decoration: none;
+}
+
+#spuul_bg{
+	position: absolute;
+	width: 646px;
+	height: 436px;
+	background:  no-repeat;
+}
 
 /* =Global
 ----------------------------------------------- */
@@ -362,7 +405,9 @@ body {
 
 }
 #page {
-	background: url('images/mainBg.jpg') repeat fixed;
+	background-image: url('images/spuul_bg.jpg'), url('images/mainBg.jpg');
+	background-position: center top, left top;
+	background-repeat: no-repeat, repeat; 
 }
 
 /* Headings */
@@ -648,7 +693,7 @@ a:hover {
 	height: auto;
 	line-height: 1.4em;
 	padding: 10px 10px;
-	width: 168px;
+	width: 100px;
 }
 #access li:hover > a,
 #access ul ul :hover > a,
@@ -1769,7 +1814,9 @@ section.recent-posts .other-recent-posts li:after {
 #content nav {
 	clear: both;
 	overflow: hidden;
-	padding: 0 0 1.625em;
+	padding: 10px;
+	background: #eee;
+	border-radius: 2px;
 }
 #content nav a {
 	text-decoration: none;
@@ -2337,7 +2384,7 @@ p.comment-form-comment {
 	}
 
 	.spuul_logo{
-		margin: 0 0 0 20px;
+		margin: 10px 0 0 20px;
 	}
 
 	#bannerImg{
@@ -2490,7 +2537,7 @@ p.comment-form-comment {
 
 	#branding .only-search #s {
 		margin: 5px 0 0 0;
-		width: 175px;
+		width: 100px;
 	}
 
 	#bannerImg{
@@ -2623,6 +2670,10 @@ p.comment-form-comment {
 		line-height: 1;
 		margin: 0 0 0px 0;
 	}
+
+	#branding .only-search #s:focus {
+	width: 120px;
+}
 
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
