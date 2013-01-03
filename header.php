@@ -46,16 +46,31 @@
 
  <!-- REQUIRED FOR PARALLAX -->
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.6.4.min.js" ></script>
+<script type="text/javascript" language="JavaScript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js" ></script>
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.jparallax.min.js" ></script>
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.event.frame.js" ></script>
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/manual.js"></script>
 <script type="text/javascript">
 jQuery(document).ready(function() 
 {
+	
 	$('#parallax .parallax-layer')
 	.parallax({
 		mouseport: $('#parallax')
 	});
+
+	$('a').hover(function(){
+		$(this).stop().animate({color: '#333333'},150);
+	},function(){
+		$(this).stop().animate({color: '#f01f01'},150);
+	});
+
+	$('a.post_title').hover(function(){
+		$(this).stop().animate({color: '#f01f01'},150);
+	},function(){
+		$(this).stop().animate({color: '#333333'},150);
+	});
+
 });
 </script>  
  <!--REQUIRED FOR PARALLAX --> 
@@ -86,13 +101,13 @@ jQuery(document).ready(function()
 
 <body <?php body_class(); ?>
 <div id="page" class="hfeed">
-	<a href="http://www.spuul.com" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/smallSpuul.png" alt="spuul logo" width="100px" height="42px" class="spuul_logo"/></a>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/smallSpuul.png" alt="spuul logo" width="100px" height="42px" class="spuul_logo"/></a>
 		
 	<header id="branding" role="banner">
 		<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
-		<?php get_search_form(); ?>
-	</div>
-		<!-- parallax -->
+			<?php get_search_form(); ?>
+		</div>
+		<!-- parallax 
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><div id="parallax" class="clear">
 		   <div class="parallax-layer" style="width:1040px; height:316px;">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/headerBg.jpg" alt="" style="width:1040px; height:318px;"/>
@@ -103,7 +118,7 @@ jQuery(document).ready(function()
 		    <div class="parallax-layer" style="width:1020px; height:308px;">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/spuul.png" alt="" style="width:1000px; height:288px;"/>
 		   </div>
-		</div></a>
+		</div></a>-->
 		 <!--/REQUIRED FOR PARALLAX -->
 
 			<hgroup>
