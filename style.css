@@ -109,6 +109,79 @@ body {
 
 }
 
+/*  POST CSS */
+
+.cast ul,.cast p,.desc ul,.desc p,.movielist{
+	padding: 0;
+	margin: 0;
+}
+
+.movielist{
+	border-top: 1px #ddd solid;
+	border-bottom: 1px #ddd solid;
+	padding: 5px 0px 5px;
+	margin: 3px 0;
+	width: 100%;
+}
+
+.movielist .highlight{
+	font-weight: 600;
+}
+
+.movielist h1,h2{
+	font-family: helvetica,sans-serif;
+	color: #333;
+	font-weight: normal;
+}
+
+.movielist h1{
+	font-size: 24px;
+	margin: 0 0 10px;
+}
+
+.movielist h2{
+	font-size: 14px;
+}
+
+.movielist p{
+	font-family: helvetica, sans-serif;
+	font-size: 12px;
+	color:#373737;
+	font-weight: 300;
+}
+
+.movielist .thumb{
+	float: left;
+	margin: 0 10px 10px 0px;
+}
+
+.movielist .desc{
+	width: 35%;
+	float: left;
+}
+
+.movielist .desc ul{
+}
+
+.movielist li{
+	list-style: none;
+	margin: 3px 0;
+}
+
+.movielist .cast{
+	margin: 10px 0;
+	clear: both;
+	background: #efefef;
+	padding: 5px;
+	width: 100%;
+}
+
+.movielist .synopsis{
+	line-height: 15px; 
+}
+
+
+
 .content_padding{
 	border-radius: 2px;
 	border: #fefefe 1px solid;
