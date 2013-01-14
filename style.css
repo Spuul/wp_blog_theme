@@ -158,6 +158,7 @@ body {
 .movielist .desc{
 	width: 35%;
 	float: left;
+	margin: 0px 0 0 0;
 }
 
 .movielist .desc ul{
