@@ -128,19 +128,23 @@ body {
 	font-weight: 600;
 }
 
-.movielist h1,h2{
+.movielist h1,h2,h3{
 	font-family: helvetica,sans-serif;
 	color: #333;
 	font-weight: normal;
 }
 
-.movielist h1{
+.movielist h2{
 	font-size: 24px;
-	margin: 0 0 10px;
+	margin: 0 0 0px;
 }
 
-.movielist h2{
+.movielist h3{
 	font-size: 14px;
+}
+
+.movielist h2:hover,.movielist h3:hover{
+	text-decoration: none;
 }
 
 .movielist p{
@@ -150,15 +154,16 @@ body {
 	font-weight: 300;
 }
 
-.movielist .thumb{
+.movielist img{
 	float: left;
 	margin: 0 10px 10px 0px;
+	padding: 0px 10px 10px 0;
 }
 
 .movielist .desc{
 	width: 35%;
 	float: left;
-	margin: 0px 0 0 0;
+	margin: -35px 0 0 0;
 }
 
 .movielist .desc ul{
@@ -168,6 +173,7 @@ body {
 	list-style: none;
 	margin: 0px 0;
 	line-height: 14px;
+	font-size: 12px;
 }
 
 .movielist .cast{
