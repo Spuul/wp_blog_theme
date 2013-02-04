@@ -441,6 +441,19 @@ body {
 #logo_menu #spuul_menu li a:hover{
 	text-decoration: none;
 }
+
+/*Smooth Slider (FEATURED POST) */
+.smooth_slider{width:450px;height:250px;background-color:#ffffff;border:0px solid #999999;} 
+.smooth_slider .sldr_title{font-family:Arial,Helvetica,sans-serif, Arial, Helvetica, sans-serif;font-size:20px;font-weight:bold;font-style:normal;color:#000000;} 
+.smooth_slider .smooth_slideri{width:402px;margin:0px 24px 0px 24px;} 
+.smooth_slider .smooth_slider_thumbnail{float:left;margin:0 10px 0 0px;max-height:120px;border:1px solid #000000;width:165px;} 
+.smooth_slider .smooth_slideri h2{clear:none;line-height:17px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:bold;font-style:normal;color:#000000;margin:0 0 5px 0;} 
+.smooth_slider .smooth_slideri h2 a{color:#000000;font-size:14px;font-weight:bold;font-style:normal;} 
+.smooth_slider .smooth_slideri span{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:normal;font-style:normal;color:#333333;} 
+.smooth_slider .smooth_slideri p.more{color:#000000;font-family:Arial,Helvetica,sans-serif;font-size:12px;} 
+.smooth_slider .smooth_next{} 
+.smooth_slider .smooth_prev{}
+
 /* =Global
 ----------------------------------------------- */
 
@@ -867,6 +880,7 @@ a:hover {
 }
 .entry-title,
 .entry-header .entry-meta {
+	font-family: 'Raleway', helvetica, sans-serif;
 	padding: 0px;
 }
 .entry-title {
@@ -882,11 +896,11 @@ a:hover {
 
 .entry-title,
 .entry-title a {
-	padding: 10px 0 10px;
-	font-family: 'Source Sans Pro', helvetica, sans-serif;
+	padding: 10px 0 0px;
+	font-family: 'Raleway', helvetica, sans-serif;
 	color: #333;
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 40px;
 	line-height: 1;
 	margin: 0px 0px 10px 0;
