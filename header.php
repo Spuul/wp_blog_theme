@@ -48,7 +48,17 @@
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.6.4.min.js" ></script>
 <script type="text/javascript" language="JavaScript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js" ></script>
 <script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/manual.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.flexslider-min.js"></script>
+<script>
+$(window).load(function() {
+    $(".flexslider").flexslider({
+        animation: "slide", 
+    });
+});
+</script> 
 
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/plugincss/flexslider-default.css"/>
 <link rel="shortcut icon" href="images/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -82,6 +92,18 @@
 			<?php get_search_form(); ?>
 		</div>
 		<div id="headerContent">
+			<!-- slideshow -->
+			<div class="flexslider">
+			  <ul class="slides">
+			    <li>
+			      <img src="wp-content/gallery/header-slide-show/ek_tha_tiger_950x400-1.jpg" />
+			    </li>
+			    <li>
+			      <img src="wp-content/gallery/header-slide-show/ladies_vs_ricky_bahl_950x400.jpg" />
+			    </li>
+			  </ul>
+			</div> 
+
 			<div class="content_padding">
 				<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
 			</div>
