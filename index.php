@@ -6,9 +6,6 @@ get_header(); ?>
 
 		<div id="primary">
 			<div id="content" role="main">
-					<div class="content_padding">
-						<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
-					</div>
 					<?php if ( have_posts() ) : ?>
 
 						<?php twentyeleven_content_nav( 'nav-above' ); ?>
