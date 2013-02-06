@@ -76,6 +76,8 @@
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 
+		<img src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/logo.png" class="logo" />
+
 		<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
 			<?php get_search_form(); ?>
 		</div>

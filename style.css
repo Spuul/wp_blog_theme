@@ -406,6 +406,11 @@ body {
 	position: relative;
 }
 
+#branding .logo{
+	margin: 50px 0 0 20px;
+	width: 276px;
+}
+
 #logo_menu{
 	position: relative;
 	width: 250px;
@@ -805,12 +810,14 @@ a:hover {
 	z-index: 1;
 }
 #branding .only-search #s {
-	background-color: #eee;
-	border-color: #ccc;
+	background-color: #000;
+	border-color: #333;
 	color: #666;
 	position: relative;
 	top: -50px;
-	left: -20px;
+	left: -100px;
+	font-family: "Raleway", helvetica, sans-serif;
+
 }
 #branding .only-search #s,
 #branding .only-search #s:focus {
