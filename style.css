@@ -70,7 +70,7 @@ footer, header, hgroup, menu, nav, section {
 ----------------------------------------------- */
 
 body {
-	/*padding: 0 0em;*/
+	width: 100%;
 }
 #page {
 	max-width: 1000px;
@@ -402,6 +402,62 @@ body {
 }
 
 /* ADDED CSS */
+
+#headerContent{
+position: relative;
+top: -20px;
+width: 100%;
+}
+
+#headerContent h1{
+	margin: 57px 0 0 0;
+	font-family: 'Raleway',Helvetica,sans-serif;
+	color: #fff;
+	font-size: 30px;
+	font-weight: 200 !important;
+	position: absolute;
+}
+
+#headerContent .padding_header{
+	width: 100%;
+	padding: 0 0px 0 0px;
+	float: right;
+	margin: -118px 0 0 0px;
+}
+
+#headerContent .movieWeek{
+	width: 49%;
+	float: left;
+}
+
+#headerLeft{
+	position: absolute;
+	width: 90%;
+}
+
+#headerContent #movieThumbWeek{
+	width: 60%;
+	margin: 10px 0 0 0px;
+	float: left;
+}
+
+#headerContent #movieThumbWeek li:last-child {
+	position: relative;
+	left: 2%;
+
+}
+
+#ngg-slideshow-1-104-1{
+	width: 60% !important;
+	float: left;
+	margin: 128px 0 0;
+}
+
+#ngg-slideshow-1-104-1 img{
+	width: 100% !important;
+	height: auto !important;
+}
+
 .post_title{
 	position: relative;
 }
@@ -448,6 +504,43 @@ body {
 	text-decoration: none;
 }
 
+/* MOVIE EXTRAS */
+#movieExtras{
+	max-width: 100%;
+	position: relative;
+	z-index: 1;
+	top:0px;
+	margin: 0px auto 0;
+	background: #434343;
+}
+
+#movieExtras #extraButton{
+	position: relative;
+	height: auto;
+	float: right;
+	left: -1.5%;
+	width: 35%;
+	cursor: pointer;
+}
+
+#movieExtras #extraButton img{
+	position: absolute;
+	bottom: 0;
+	max-width: 100%;
+	width: 100%;
+}
+
+#movieExtras #extraContainer{
+	width: 100%;
+	height: 500px;
+	display: none;
+}
+
+#movieExtras .extraLimit{
+	max-width: 1000px;
+	margin: 0px auto;
+}
+
 /* =Global
 ----------------------------------------------- */
 
@@ -459,10 +552,14 @@ body, input, textarea {
 }
 body {
 	background: #fafafa;
+	height: 100%;
 
 }
 #page {
-
+	max-width: 1000px;
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto 0px;
 }
 
 /* Headings */
@@ -2374,7 +2471,8 @@ p.comment-form-comment {
 
 #colophon {
 	clear: both;
-	background: rgba(0,0,0,0.0);
+	background: #0e0e0e;
+	z-index: 10;
 }
 #supplementary {
 	border-top: 1px solid #ddd;
@@ -2405,16 +2503,19 @@ p.comment-form-comment {
 /* Site Generator Line */
 #site-generator {
 	font-size: 14px;
+	margin: 0px auto;
 	font-weight: 400;
 	line-height: 2.2em;
 	padding: 1em 0.5em;
-	text-align: center;
+	text-align: left;
 	color: #666;
+	max-width: 1000px;
 	text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
 }
 #site-generator a {
-	color: #888;
+	color: #fff;
 	font-weight: 300;
+	font-family: 'Raleway',helvetica,sans-serif;
 }
 
 

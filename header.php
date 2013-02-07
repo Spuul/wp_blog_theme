@@ -82,7 +82,7 @@ $(window).load(function() {
 ?>
 </head>
 
-<body <?php body_class(); ?>
+<body <?php body_class(); ?>>
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 
@@ -92,20 +92,21 @@ $(window).load(function() {
 			<?php get_search_form(); ?>
 		</div>
 		<div id="headerContent">
-			<!-- slideshow -->
-			<div class="flexslider">
-			  <ul class="slides">
-			    <li>
-			      <img src="wp-content/gallery/header-slide-show/ek_tha_tiger_950x400-1.jpg" />
-			    </li>
-			    <li>
-			      <img src="wp-content/gallery/header-slide-show/ladies_vs_ricky_bahl_950x400.jpg" />
-			    </li>
-			  </ul>
-			</div> 
-
-			<div class="content_padding">
+			<div id="headerLeft" class="content_padding">
+				
+				<h1>Movies This Week on Spuul</h1>
+				<!-- slideshow -->
+				<?php echo do_shortcode('[slideshow id=1]') ;?>
+				
+				<ul id="movieThumbWeek">
+					<li><img class="movieWeek" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/movieWeek1.jpg"/></li>
+					<li><img class="movieWeek" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/movieWeek2.jpg"/></li>
+				
+				</ul>
+			</div>
+			<div class="padding_header">
 				<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
+	
 			</div>
 		</div>
 			<hgroup>

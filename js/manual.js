@@ -14,4 +14,13 @@ $(document).ready(function(){
 	},function(){
 		$(this).next().animate({opacity: '0',top: '-75'},300);
 	});
+
+	$('#extraButton').toggle(function(){
+		$('#movieExtras').animate({top: '0'},250);
+		$('#movieExtras #extraContainer').fadeOut('fast');
+	},function(){
+		$('#movieExtras').animate({top: '-500'},250);
+		$('#movieExtras #extraContainer').fadeIn('fast');
+	});
 });
+
