@@ -16,11 +16,16 @@ $(document).ready(function(){
 	});
 
 	$('#extraButton').toggle(function(){
-		$('#movieExtras').animate({top: '0'},250);
-		$('#movieExtras #extraContainer').fadeOut('fast');
-	},function(){
-		$('#movieExtras').animate({top: '-500'},250);
+		$('#movieExtras').animate({top: '-750px'},250);
 		$('#movieExtras #extraContainer').fadeIn('fast');
+		$('#colophon').css('margin-top','-750px');
+		$('#extraButton img').attr('src','http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/extras.jpg');
+		//$('#movieExtras #extraContainer').show('fast');
+	},function(){
+		$('#movieExtras').animate({top: '60'},250);
+		$('#movieExtras #extraContainer').fadeOut('fast');
+		$('#extraButton img').attr('src','http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/extrasup.jpg');
+		//$('#movieExtras #extraContainer').hide('down');
 	});
 });
 
