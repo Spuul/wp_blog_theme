@@ -405,7 +405,7 @@ body {
 
 #headerContent{
 position: relative;
-top: -20px;
+top: -40px;
 width: 100%;
 }
 
@@ -900,7 +900,7 @@ a:hover {
 	-o-transition-duration: 400ms;
 	-o-transition-property: width, background;
 	-o-transition-timing-function: ease;
-	width: 72px;
+	width: 75px;
 }
 #branding #s:focus {
 	background-color: #fff;
@@ -943,7 +943,7 @@ a:hover {
 ----------------------------------------------- */
 
 #main {
-	background: #ffffff;
+	background: #f0eced;
 	clear: both;
 	/*padding: 1.625em 0 0;*/
 	padding: 0;
@@ -2534,6 +2534,51 @@ p.comment-form-comment {
 	padding: 0 0px;
 	}
 
+	/* new css */
+	#headerLeft{
+		position: relative;
+		width: 90%;
+	}
+
+	#headerContent #movieThumbWeek{
+		width: 100%;
+		margin: 10px 0 0 0px;
+		float: left;
+		display: none;
+	}
+
+	#headerContent #movieThumbWeek li:last-child {
+		position: relative;
+		left: 2%;
+
+	}
+
+	#ngg-slideshow-1-104-1{
+		width: 100% !important;
+		float: left;
+		margin: 128px 0 0;
+	}
+
+	#ngg-slideshow-1-104-1 img{
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	#headerContent .padding_header {
+	width: 100%;
+	padding: 0 0px 0 0px;
+	float: right;
+	margin: 3em 0 -5em 0px;
+}
+
+	.featured{
+		display: block;
+	}
+
+	.post_title{
+		position: relative;
+	}
+
 	#main #content {
 		margin: 0 0;
 		width: auto;
@@ -2562,12 +2607,8 @@ p.comment-form-comment {
 		font-weight: 400;
 		font-size: 30px;
 		line-height: 1;
-		margin: 0 0 0px 0;
+		margin: 30px 0 0px 
 		text-shadow: -1px -1px 0px rgba(0,0,0,.2); /* 50% white from bottom */
-	}
-
-	#parallax{
-		display: none;
 	}
 
 	#primary{
@@ -2676,7 +2717,6 @@ p.comment-form-comment {
 	}
 	/* No need to float footer widgets at this size */
 	#colophon #supplementary .widget-area {
-		float: none;
 		margin-right: 0;
 		width: auto;
 	}
@@ -2694,18 +2734,61 @@ p.comment-form-comment {
 		font-size: 15px;
 		font-weight: 300;
 	}
+
+	.movielist .desc {
+		width: 100%;
+		float: left;
+		margin: 0px 0 0 0;
+	}
+
+
+	#branding .only-search #searchform {
+	z-index: 1;
+	position: relative;
+	top:40px;
+	right: -70px;
+	}
+
+	#movieExtras #extraButton{
+	position: relative;
+	height: auto;
+	float: right;
+	left: 0;
+	width: 50%;
+	cursor: pointer;
+	}
+
+	#branding .logo{
+	margin: 20px 0 0 20px;
+	width: 276px;
+	}
+
+	.movieWeek{
+		display: none;
+	}
+
+	#ngg-slideshow-1-104-1{
+		width: 100% !important;
+		float: left;
+		margin: 0 0 0;
+	}
+
 	#site-title a {
 		font-size: 24px;
 	}
 
 	#branding .only-search #s {
 		margin: 5px 0 0 0;
-		width: 100px;
+		width: 70%;
 	}
 
 	#bannerImg{
 		display: block;
 	}
+
+	#headerContent h1 {
+		position: relative;
+	}	
 
 	#parallax{
 		display: none;
@@ -2806,6 +2889,41 @@ p.comment-form-comment {
 
 }
 @media (max-width: 450px) {
+		#headerContent h1 {
+		margin: 90px 0 0 0;
+		font-family: 'Raleway',Helvetica,sans-serif;
+		color: #fff;
+		font-size: 25px;
+		font-weight: 200 !important;
+		position: relative;
+	}
+
+	#ngg-slideshow-1-104-1{
+		width: 100% !important;
+		height: 150px !important;
+		float: left;
+		margin: 0 0 0;
+	}
+
+	#movieExtras #extraButton{
+	position: relative;
+	height: auto;
+	left: 0;
+	width: 100%;
+	cursor: pointer;
+	}
+
+	.movielist .desc {
+	width: 100%;
+	float: left;
+	margin: 0px 0 0 0;
+	}
+
+	#main{
+		position: relative;
+		top: -150px;
+	}
+
 	#bannerImg{
 		display: block;
 	}

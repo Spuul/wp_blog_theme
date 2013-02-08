@@ -104,7 +104,7 @@ $(window).load(function() {
 				
 				</ul>
 			</div>
-			<div class="padding_header">
+			<div class="padding_header featured">
 				<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
 	
 			</div>

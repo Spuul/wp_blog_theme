@@ -23,13 +23,7 @@
 </div>	
 <footer id="colophon" role="contentinfo">
 
-		<?php
-			/* A sidebar in the footer? Yep. You can can customize
-			 * your footer with three columns of widgets.
-			 */
-			if ( ! is_404() )
-				get_sidebar( 'footer' );
-		?>
+		
 			<div id="site-generator">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"> Copyright <?php echo strftime('%Y',time()); ?> &copy; Spuul Pte. Ltd.</a>
 			</div>

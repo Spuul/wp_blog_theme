@@ -23,6 +23,7 @@ $(document).ready(function(){
 		//$('#movieExtras #extraContainer').show('fast');
 	},function(){
 		$('#movieExtras').animate({top: '60'},250);
+		$('#colophon').css('margin-top','-0px');
 		$('#movieExtras #extraContainer').fadeOut('fast');
 		$('#extraButton img').attr('src','http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/extrasup.jpg');
 		//$('#movieExtras #extraContainer').hide('down');
