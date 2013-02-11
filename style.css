@@ -419,10 +419,10 @@ width: 100%;
 }
 
 #headerContent .padding_header{
-	width: 100%;
-	padding: 0 0px 0 0px;
+	width: 37%;
 	float: right;
 	margin: -118px 0 0 0px;
+	height: 45em;
 }
 
 #headerContent .movieWeek{
@@ -431,12 +431,18 @@ width: 100%;
 }
 
 #headerLeft{
-	position: absolute;
-	width: 90%;
+	position: relative;
+	width: 100%;
+}
+
+#headerLeft #left{
+
+	width: 58%;
+	float: left;
 }
 
 #headerContent #movieThumbWeek{
-	width: 60%;
+	width: 100%;
 	margin: 10px 0 0 0px;
 	float: left;
 }
@@ -448,7 +454,7 @@ width: 100%;
 }
 
 #ngg-slideshow-1-104-1{
-	width: 60% !important;
+	width: 100% !important;
 	float: left;
 	margin: 128px 0 0;
 }
@@ -524,7 +530,7 @@ width: 100%;
 }
 
 #movieExtras #extraButton img{
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	max-width: 100%;
 	width: 100%;
@@ -543,6 +549,11 @@ width: 100%;
 
 #extraContainer #movieContainer{
 	width: 100%;	
+}
+
+#logoHead{
+	width: 100%;
+	border: thin red solid;
 }
 
 
@@ -890,7 +901,7 @@ a:hover {
 	margin: 0;
 }
 #branding #s {
-	float: right;
+	float: none;
 	-webkit-transition-duration: 400ms;
 	-webkit-transition-property: width, background;
 	-webkit-transition-timing-function: ease;
@@ -2540,6 +2551,11 @@ p.comment-form-comment {
 		width: 90%;
 	}
 
+	#headerLeft #left{
+	width: 100%;
+	float: left;
+}
+
 	#headerContent #movieThumbWeek{
 		width: 100%;
 		margin: 10px 0 0 0px;
@@ -2565,11 +2581,13 @@ p.comment-form-comment {
 	}
 
 	#headerContent .padding_header {
-	width: 100%;
-	padding: 0 0px 0 0px;
-	float: right;
-	margin: 3em 0 -5em 0px;
-}
+	width: 95%;
+	padding: 0px 20px;
+	float: left;
+	margin: 3em 0 15px 0px;
+	background: #424242;
+	height: 45em;
+	}
 
 	.featured{
 		display: block;
@@ -2741,12 +2759,19 @@ p.comment-form-comment {
 		margin: 0px 0 0 0;
 	}
 
+	#headerContent .padding_header {
+		width: 95%;
+		padding: 0px 20px;
+		float: left;
+		margin: 3em 0 15px 0px;
+		background: #424242;
+		height: 40em;
+	}
 
 	#branding .only-search #searchform {
 	z-index: 1;
 	position: relative;
 	top:40px;
-	right: -70px;
 	}
 
 	#movieExtras #extraButton{
@@ -2778,7 +2803,7 @@ p.comment-form-comment {
 	}
 
 	#branding .only-search #s {
-		margin: 5px 0 0 0;
+		margin: 5px -65px 0 0;
 		width: 70%;
 	}
 
@@ -2898,6 +2923,15 @@ p.comment-form-comment {
 		position: relative;
 	}
 
+	#headerContent .padding_header {
+		width: 95%;
+		padding: 0px 0px 0 20px;
+		float: left;
+		margin: 3em 0 15px 0px;
+		background: #424242;
+		height: 35em;
+	}
+
 	#ngg-slideshow-1-104-1{
 		width: 100% !important;
 		height: 150px !important;
@@ -2921,7 +2955,7 @@ p.comment-form-comment {
 
 	#main{
 		position: relative;
-		top: -150px;
+		top: 0px;
 	}
 
 	#bannerImg{

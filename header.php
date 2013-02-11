@@ -93,20 +93,22 @@ $(window).load(function() {
 		</div>
 		<div id="headerContent">
 			<div id="headerLeft" class="content_padding">
-				
-				<h1>Movies This Week on Spuul</h1>
-				<!-- slideshow -->
-				<?php echo do_shortcode('[slideshow id=1]') ;?>
-				
-				<ul id="movieThumbWeek">
-					<li><img class="movieWeek" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/movieWeek1.jpg"/></li>
-					<li><img class="movieWeek" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/movieWeek2.jpg"/></li>
-				
-				</ul>
+				<div id="left">
+					<h1>Movies This Week on Spuul</h1>
+					<!-- slideshow -->
+					<?php echo do_shortcode('[slideshow id=1]') ;?>
+					
+					<ul id="movieThumbWeek">
+						<li><img class="movieWeek" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/movieWeek1.jpg"/></li>
+						<li><img class="movieWeek" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/movieWeek2.jpg"/></li>
+					
+					</ul>
+					<div style="clear:both;"></div>
+				</div>
 			</div>
 			<div class="padding_header featured">
 				<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
-	
+				<div style="clear:both;"></div>
 			</div>
 		</div>
 			<hgroup>
