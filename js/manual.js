@@ -28,5 +28,12 @@ $(document).ready(function(){
 		$('#extraButton img').attr('src','http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/extrasup.jpg');
 		//$('#movieExtras #extraContainer').hide('down');
 	});
+
+	/*AVS load*/
+
+	$('avs_gallery').bind('click',function(){
+		alert('clicked');
+		return false;
+	});
 });
 

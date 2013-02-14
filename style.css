@@ -453,13 +453,13 @@ width: 100%;
 
 }
 
-#ngg-slideshow-1-104-1{
+.ngg-slideshow{
 	width: 100% !important;
 	float: left;
 	margin: 128px 0 0;
 }
 
-#ngg-slideshow-1-104-1 img{
+.ngg-slideshow img{
 	width: 100% !important;
 	height: auto !important;
 }
@@ -530,7 +530,7 @@ width: 100%;
 }
 
 #movieExtras #extraButton img{
-	position: relative;
+	position: absolute;
 	bottom: 0;
 	max-width: 100%;
 	width: 100%;
@@ -556,6 +556,69 @@ width: 100%;
 	border: thin red solid;
 }
 
+
+/* FOOTER video css */
+
+.html5playerer-default{
+	width: 85% !important;
+	position: relative;
+	top: 50px;
+	margin: 0px auto !important;
+}
+
+.minplayer-default-preview{
+
+}
+
+.html5playerer-default-playlist-pager{
+	display: none !important;
+}
+
+.minplayer-default-timer{
+	color: #ffffff;
+}
+
+.minplayer-default-volume{
+	background: url('images/vol_icon.png') no-repeat bottom;
+	width: 24px;
+	height: 24px;
+	right: 20px !important;
+}
+
+.player-ui .html5playerer-default-playlist-scroll {
+	position: absolute;
+	overflow: scroll !important;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 32px;
+}
+
+.minplayer-default-fullscreen-inner, .minplayer-default-fullscreen{
+	width: 16px;
+	height: 8px;
+	display: none;
+}
+
+.html5playerer-default-teaser-image img{
+	display: block !important;
+	width: 100%;
+}
+
+.minplayer-default-preview img{
+	display: block !important;
+	width: 90% !important;
+	height: auto !important;
+	margin: 15px auto !important;
+}
+
+.html5playerer-default-teaser-title{
+	color: #ffffff;
+}
+
+.html5playerer-default{
+	border: none !important;
+}
 
 
 /* =Global
@@ -2316,8 +2379,8 @@ a.comment-reply-link > span {
 
 /* Post author highlighting */
 .commentlist > li.bypostauthor {
-	background: #efefef;
-	border-bottom: 1px #eee solid;
+	background: #f0ecec;
+	border-bottom: 1px #dddddd solid;
 }
 .commentlist > li.bypostauthor .comment-meta {
 	color: #575757;
@@ -2350,7 +2413,7 @@ a.comment-reply-link > span {
 
 /* Comment Form */
 #respond {
-	background: #fff;
+	background: #f0ecec;
 	margin: 0 auto 1.625em;
 	position: relative;
 	width: 100%;
@@ -2373,7 +2436,7 @@ a.comment-reply-link > span {
 #respond .comment-form-email label,
 #respond .comment-form-url label,
 #respond .comment-form-comment label {
-	background: #fff;
+	background: #f0ecec;
 	color: #666;
 	display: inline-block;
 	font-size: 13px;
@@ -2412,9 +2475,9 @@ a.comment-reply-link > span {
 	margin: -20px 0 10px;
 }
 #respond input#submit {
-	background: #fff;
-	border: 1px #efefef solid;
-	color: #888;
+	background: #ffffff;
+	border: none;
+	color: #f01f01;
 	cursor: pointer;
 	font-size: 12px;
 	margin: 0px 10px 20px 0;
@@ -2546,15 +2609,16 @@ p.comment-form-comment {
 	}
 
 	/* new css */
+
 	#headerLeft{
 		position: relative;
-		width: 90%;
+		width: 85%;
 	}
 
 	#headerLeft #left{
 	width: 100%;
 	float: left;
-}
+	}
 
 	#headerContent #movieThumbWeek{
 		width: 100%;
@@ -2569,20 +2633,20 @@ p.comment-form-comment {
 
 	}
 
-	#ngg-slideshow-1-104-1{
+	.ngg-slideshow{
 		width: 100% !important;
 		float: left;
 		margin: 128px 0 0;
 	}
 
-	#ngg-slideshow-1-104-1 img{
+	.ngg-slideshow img{
 		width: 100% !important;
 		height: auto !important;
 	}
 
 	#headerContent .padding_header {
-	width: 95%;
-	padding: 0px 20px;
+	width: 90%;
+	padding: 0px 10% 0 20px;
 	float: left;
 	margin: 3em 0 15px 0px;
 	background: #424242;
@@ -2760,8 +2824,8 @@ p.comment-form-comment {
 	}
 
 	#headerContent .padding_header {
-		width: 95%;
-		padding: 0px 20px;
+		width: 90%;
+		padding: 0px 10% 0 20px;
 		float: left;
 		margin: 3em 0 15px 0px;
 		background: #424242;
@@ -2785,14 +2849,14 @@ p.comment-form-comment {
 
 	#branding .logo{
 	margin: 20px 0 0 20px;
-	width: 276px;
+	width: 200px;
 	}
 
 	.movieWeek{
 		display: none;
 	}
 
-	#ngg-slideshow-1-104-1{
+	.ngg-slideshow{
 		width: 100% !important;
 		float: left;
 		margin: 0 0 0;
@@ -2803,7 +2867,7 @@ p.comment-form-comment {
 	}
 
 	#branding .only-search #s {
-		margin: 5px -65px 0 0;
+		margin: 15px -75px 0 0;
 		width: 70%;
 	}
 
@@ -2923,16 +2987,17 @@ p.comment-form-comment {
 		position: relative;
 	}
 
+
 	#headerContent .padding_header {
-		width: 95%;
-		padding: 0px 0px 0 20px;
+		width: 90%;
+		padding: 0px 5% 0 5%;
 		float: left;
 		margin: 3em 0 15px 0px;
 		background: #424242;
 		height: 35em;
 	}
 
-	#ngg-slideshow-1-104-1{
+	.ngg-slideshow{
 		width: 100% !important;
 		height: 150px !important;
 		float: left;
@@ -2992,6 +3057,8 @@ p.comment-form-comment {
 
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+
 	body {
 		padding: 0;
 	}
@@ -3001,12 +3068,27 @@ p.comment-form-comment {
 	#branding {
 		border-top: none;
 	}
+
+	#branding .logo{
+		width: 150px;
+	}
+
 	#bannerImg{
 		display: block;
 	}
 
 	#parallax{
 		display: none;
+	}
+
+	.content_padding{
+	padding: 20px 0 0 20px;
+	margin: 0px 0 10px;
+	}
+
+	#headerLeft #left{
+	width: 85%;
+	float: left;
 	}
 
 }

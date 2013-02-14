@@ -9,15 +9,16 @@
 			<img src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/extrasup.jpg" />
 		</div>
 		<div id="extraContainer">
-			<ul id="movieContainer">
+			<ul style="display:none;" id="movieContainer">
 				<?php
 			/* A sidebar in the footer? Yep. You can can customize
 			 * your footer with three columns of widgets.
 			 */
 			if ( ! is_404() )
 				get_sidebar( 'footer' );
-		?>
+				?>
 			</ul>
+			<?php echo do_shortcode('[html5video id=3]'); ?>
 		</div>
 	</div>
 </div>	
@@ -27,6 +28,8 @@
 			<div id="site-generator">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"> Copyright <?php echo strftime('%Y',time()); ?> &copy; Spuul Pte. Ltd.</a>
 			</div>
+
+
 </footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
