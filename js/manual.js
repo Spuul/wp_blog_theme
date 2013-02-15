@@ -16,9 +16,9 @@ $(document).ready(function(){
 	});
 
 	$('#extraButton').toggle(function(){
-		$('#movieExtras').animate({top: '-750px'},250);
+		$('#movieExtras').animate({top: '-500px'},250);
 		$('#movieExtras #extraContainer').fadeIn('fast');
-		$('#colophon').css('margin-top','-750px');
+		$('#colophon').css('margin-top','-500px');
 		$('#extraButton img').attr('src','http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/extras.jpg');
 		//$('#movieExtras #extraContainer').show('fast');
 	},function(){
