@@ -86,24 +86,22 @@ $(window).load(function() {
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 
-		<img src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/logo.png" class="logo" />
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory');?>/images/logo.png ?>" class="logo" /></a>
 
 		<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
 			<?php get_search_form(); ?>
 		</div>
 		<div id="headerContent">
-			<div id="headerLeft" class="content_padding">
+			<div id="headerLeft">
 				<div id="left">
 					<h1>Movies This Week on Spuul</h1>
 					<!-- slideshow -->
 					<?php echo do_shortcode('[slideshow id=1]') ;?>
-					
-					<ul id="movieThumbWeek">
-						<li><img class="movieWeek" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/movieWeek1.jpg"/></li>
-						<li><img class="movieWeek" src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/movieWeek2.jpg"/></li>
-					
-					</ul>
 					<div style="clear:both;"></div>
+					<div id="movieThumbWeek">
+						<?php echo do_shortcode('[nggallery id=2]') ;?>
+					</div>
+					
 				</div>
 			</div>
 			<div class="padding_header featured">

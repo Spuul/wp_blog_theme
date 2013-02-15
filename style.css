@@ -407,6 +407,7 @@ body {
 position: relative;
 top: -40px;
 width: 100%;
+padding: 0px;
 }
 
 #headerContent h1{
@@ -421,8 +422,9 @@ width: 100%;
 #headerContent .padding_header{
 	width: 37%;
 	float: right;
-	margin: -118px 0 0 0px;
+	margin: -90px 0 0 0px;
 	height: 45em;
+	padding-right: 20px;
 }
 
 #headerContent .movieWeek{
@@ -432,12 +434,12 @@ width: 100%;
 
 #headerLeft{
 	position: relative;
-	width: 100%;
+	width: 85%;
 }
 
 #headerLeft #left{
-
-	width: 58%;
+	padding-left: 20px;
+	width: 68%;
 	float: left;
 }
 
@@ -556,6 +558,36 @@ width: 100%;
 	border: thin red solid;
 }
 
+/*Thumbnail subheader */
+.slideshowlink{
+	display: none;
+}
+
+.ngg-gallery-thumbnail-box{
+	width: 49%;
+}
+
+.ngg-galleryoverview #ngg-image-6{
+	position: relative;
+	left: 2%;
+}
+
+.ngg-gallery-thumbnail{
+	width: 100% !important;
+	float: none !important;
+}
+
+.ngg-gallery-thumbnail img{
+	border: none !important;
+	margin: 0px !important;
+	width: 100% !important;
+	padding: 0px !important;
+	float: none !important;
+}
+
+#headerContent #movieThumbWeek img{
+	width: 100% !important;
+}
 
 /* FOOTER video css */
 
@@ -607,9 +639,9 @@ width: 100%;
 
 .minplayer-default-preview img{
 	display: block !important;
-	width: 90% !important;
+	width: 100% !important;
 	height: auto !important;
-	margin: 15px auto !important;
+	margin: 0px auto !important;
 }
 
 .html5playerer-default-teaser-title{
@@ -956,7 +988,7 @@ a:hover {
 /* Search Form */
 
 #branding #searchform {
-	position: absolute;
+	position: relative;
 	right: 0%;
 	text-align: right;
 }
@@ -998,7 +1030,7 @@ a:hover {
 }
 #branding .only-search #s,
 #branding .only-search #s:focus {
-	width: 220px;
+	width: 30%;
 }
 #branding .only-search #s:focus {
 	background-color: #fff;
@@ -2586,7 +2618,7 @@ p.comment-form-comment {
 	margin: 0px auto;
 	font-weight: 400;
 	line-height: 2.2em;
-	padding: 1em 0.5em;
+	padding: 1em 20px;
 	text-align: left;
 	color: #666;
 	max-width: 1000px;
@@ -2612,7 +2644,7 @@ p.comment-form-comment {
 
 	#headerLeft{
 		position: relative;
-		width: 85%;
+		width: 90%;
 	}
 
 	#headerLeft #left{
@@ -2646,7 +2678,7 @@ p.comment-form-comment {
 
 	#headerContent .padding_header {
 	width: 90%;
-	padding: 0px 10% 0 20px;
+	padding: 0px 5% 0 5%;
 	float: left;
 	margin: 3em 0 15px 0px;
 	background: #424242;
@@ -2825,7 +2857,7 @@ p.comment-form-comment {
 
 	#headerContent .padding_header {
 		width: 90%;
-		padding: 0px 10% 0 20px;
+		padding: 0px 5% 0 5%;
 		float: left;
 		margin: 3em 0 15px 0px;
 		background: #424242;
@@ -3052,8 +3084,8 @@ p.comment-form-comment {
 	}
 
 	#branding .only-search #s:focus {
-	width: 120px;
-}
+	width: 75%;
+	}
 
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -3082,7 +3114,7 @@ p.comment-form-comment {
 	}
 
 	.content_padding{
-	padding: 20px 0 0 20px;
+	padding: 20px 0 0 0px;
 	margin: 0px 0 10px;
 	}
 

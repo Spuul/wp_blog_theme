@@ -18,7 +18,7 @@
 				get_sidebar( 'footer' );
 				?>
 			</ul>
-			<?php echo do_shortcode('[html5video id=3]'); ?>
+			<?php //echo do_shortcode('[html5video id=3]'); ?>
 		</div>
 	</div>
 </div>	
