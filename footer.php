@@ -3,7 +3,7 @@
 
 </div><!-- #page -->
 <div style="clear: both;"></div>
-<div id="movieExtras">
+<div id="movieExtras" style="display:none;">
 	<div class="extraLimit">
 		<div id="extraButton">
 			<img src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/extrasup.jpg" />

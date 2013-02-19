@@ -93,6 +93,11 @@ body {
 
 /*  POST CSS */
 
+.type-post{
+	padding-bottom: 20px !important;
+	border-bottom: 2px #fff solid !important;
+}
+
 .cast ul,.cast p,.desc ul,.desc p,.movielist{
 	padding: 0;
 	margin: 0;
@@ -2868,8 +2873,8 @@ p.comment-form-comment {
 	}
 
 	#headerContent .padding_header {
-		width: 90%;
-		padding: 0px 5% 0 5%;
+		width: 95%;
+		padding: 0px 2.5% 0 2.5%;
 		float: left;
 		margin: 3em 0 15px 0px;
 		background: #424242;
@@ -3027,7 +3032,7 @@ p.comment-form-comment {
 }
 @media (max-width: 450px) {
 		#headerContent h1 {
-		margin: 90px 0 0 0;
+		margin: 50px 0 0 0;
 		font-family: 'Raleway',Helvetica,sans-serif;
 		color: #fff;
 		font-size: 25px;
@@ -3044,7 +3049,7 @@ p.comment-form-comment {
 		width: 90%;
 		padding: 0px 5% 0 5%;
 		float: left;
-		margin: 3em 0 15px 0px;
+		margin: 1.5em 0 15px 0px;
 		background: #424242;
 		height: 35em;
 	}

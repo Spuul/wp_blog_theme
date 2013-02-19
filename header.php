@@ -91,61 +91,7 @@ $(window).load(function() {
 		<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
 			<?php get_search_form(); ?>
 		</div>
-<<<<<<< HEAD
-<?php
-$query_images_args = array(
-    'post_type' => 'attachment', 'post_mime_type' =>'image', 'post_status' => 'inherit', 'posts_per_page' => -1,
-);
 
-$query_images = new WP_Query( $query_images_args );
-$images = array(); $count = 0;
-$image_names = array();
-foreach ( $query_images->posts as $image) {
-      $alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);
-      if( strpos($alt, "slider") !== FALSE ){
-         $images[]= wp_get_attachment_url( $image->ID );
-      }
-}
-?>
-
-<script type='text/javascript'>
-  var slideShow = <?php echo json_encode($images); ?>;
-  var slideShowIndex = 0;
-  setInterval(function(){
-                window.slideShowIndex++;
-                if(window.slideShowIndex >= window.slideShow.length){
-                  window.slideShowIndex = 0;
-                }
-
-                jQuery('#slideShowImg').attr('src', window.slideShow[window.slideShowIndex]);
-              }, 3000);
-</script>
-
-		<div id="headerContent">
-			<div id="headerLeft">
-				<div id="left">
-					<h1>Movies This Week on Spuul</h1>
-					<!-- slideshow -->
-<div id="slideshow_1" class="ngg-slideshow" style="height:240px;width:320px;">
-             <?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:absolute;top:0px;left:0px;display:block;z-index:4'>" ?>        
-</div>
-
-					<div style="clear:both;"></div>
-					<div id="movieThumbWeek">
-						<?php echo do_shortcode('[nggallery id=2]') ;?>
-					</div>
-					
-				</div>
-			</div>
-			<div class="padding_header featured">
-				<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
-				<div style="clear:both;"></div>
-			</div>
-		</div>
-=======
-
-
->>>>>>> fix css
 			<hgroup>
 				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -242,9 +188,9 @@ foreach ( $query_images->posts as $image) {
                    window.slideShowIndex++;
 
                 }
-jQuery('#slideShowImg').attr('src', window.slideShow[window.slideShowIndex]);
-console.log(window.slideShowIndex, window.slideShow[window.slideShowIndex]);
-                console.log(jQuery('#slideShowImg').attr('src'));
+				jQuery('#slideShowImg').attr('src', window.slideShow[window.slideShowIndex]);
+				console.log(window.slideShowIndex, window.slideShow[window.slideShowIndex]);
+				                console.log(jQuery('#slideShowImg').attr('src'));
 
               }, 3000);                        
 
@@ -257,8 +203,9 @@ console.log(window.slideShowIndex, window.slideShow[window.slideShowIndex]);
 					<h1>Movies This Week on Spuul</h1>
 					<!-- slideshow -->
 		        	<div id="slideshow_1" class="ngg-slideshow">
-		             	<h1><?php// echo print_r($image_names[0]); ?></h1>
-		             	<?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?>        
+		             	<!--<h1><?php// echo print_r($image_names[0]); ?></h1>-->
+		             	<?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?> 
+		      
 	          		</div>
 
 					<div style="clear:both;"></div>
