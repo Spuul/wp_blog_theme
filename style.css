@@ -410,7 +410,7 @@ body {
 
 #header1{
 	width: 100%;
-	padding: 10px 20px;
+	padding: 10px 0px;
 }
 
 
@@ -434,7 +434,7 @@ padding: 0px;
 	width: 37%;
 	float: right;
 	margin: -90px 0 0 0px;
-	height: 45em;
+	height: 36em;
 	padding-right: 20px;
 }
 
@@ -443,21 +443,44 @@ padding: 0px;
 	float: left;
 }
 
+
+#slideshow_1{
+	height: 100%;
+	position: relative;
+}
+
+.ngg-slideshow{
+	overflow: visible !important;
+}
+
+.header_thumb{
+	width: 49% !important;
+	float: left;
+	margin-bottom: 0px !important;
+	margin: 5px 0 0 0 !important;
+}
+
+.gap{
+	padding-left: 2%;
+}
+
 #headerLeft{
 	position: relative;
 	width: 55%;
+	height: auto;
 }
 
 #headerLeft #left{
 	padding-left: 20px;
 	width: 100%;
 	float: left;
-	margin: 10px 0 0px;
+	margin: 17px 0 0px;
+	padding-bottom: 2em;
 }
 
 #headerContent #movieThumbWeek{
 	width: 100%;
-	margin: 10px 0 0 0px;
+	margin: 0px 0 0 0px;
 	float: left;
 }
 
@@ -484,6 +507,7 @@ padding: 0px;
 
 #branding .logo{
 	width: 276px;
+	margin: 0 0 0 20px;
 }
 
 #logo_menu{
@@ -567,37 +591,6 @@ padding: 0px;
 #logoHead{
 	width: 100%;
 	border: thin red solid;
-}
-
-/*Thumbnail subheader */
-.slideshowlink{
-	display: none;
-}
-
-.ngg-gallery-thumbnail-box{
-	width: 49%;
-}
-
-.ngg-galleryoverview #ngg-image-6{}
-	position: relative;
-	left: 2%;
-}
-
-.ngg-gallery-thumbnail{
-	width: 100% !important;
-	float: none !important;
-}
-
-.ngg-gallery-thumbnail img{
-	border: none !important;
-	margin: 0px !important;
-	width: 100% !important;
-	padding: 0px !important;
-	float: none !important;
-}
-
-#headerContent #movieThumbWeek img{
-	width: 100% !important;
 }
 
 /* FOOTER video css */
@@ -900,7 +893,6 @@ a:hover {
 }
 #branding img{
 	height: auto;
-	margin-bottom: -7px;
 	width: 100%;
 }
 
@@ -1035,13 +1027,13 @@ a:hover {
 	color: #666;
 	position: relative;
 	top: -45px;
-	left: -50px;
+	left: -40px;
 	font-family: "Raleway", helvetica, sans-serif;
 
 }
 #branding .only-search #s,
 #branding .only-search #s:focus {
-	width: 30%;
+	width: 29%;
 }
 #branding .only-search #s:focus {
 	background-color: #fff;
@@ -2688,7 +2680,7 @@ p.comment-form-comment {
 	.ngg-slideshow{
 		width: 100% !important;
 		float: left;
-		margin: 128px 0 0;
+		margin: 60px 0 0;
 	}
 
 	.ngg-slideshow img{
@@ -2697,8 +2689,8 @@ p.comment-form-comment {
 	}
 
 	#headerContent .padding_header {
-	width: 90%;
-	padding: 0px 5% 0 5%;
+	width: 95%;
+	padding: 0px 2.5% 0 2.5%;
 	float: left;
 	margin: 3em 0 15px 0px;
 	background: #424242;
@@ -2904,7 +2896,7 @@ p.comment-form-comment {
 	}
 
 	#branding .logo{
-	margin: 10px 0 0 10px;
+	margin: 10px 0 0 20px;
 	width: 200px;
 	}
 
@@ -3045,7 +3037,7 @@ p.comment-form-comment {
 
 	#branding .only-search #s{
 		top: 30px;
-		width: 70%;
+		width: 75%;
 	}
 
 	#headerContent .padding_header {
