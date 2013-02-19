@@ -91,12 +91,45 @@ $(window).load(function() {
 		<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
 			<?php get_search_form(); ?>
 		</div>
+<?php
+$query_images_args = array(
+    'post_type' => 'attachment', 'post_mime_type' =>'image', 'post_status' => 'inherit', 'posts_per_page' => -1,
+);
+
+$query_images = new WP_Query( $query_images_args );
+$images = array(); $count = 0;
+$image_names = array();
+foreach ( $query_images->posts as $image) {
+    if( strpos($image->post_name, "coming") !== FALSE ){
+       $images[]= wp_get_attachment_url( $image->ID );
+    }   
+}
+?>
+<?php print_r($images); ?>
+
+<script type='text/javascript'>
+  var slideShow = <?php echo json_encode($images); ?>;
+  var slideShowIndex = 0;
+  setInterval(function(){
+                if(window.slideShowIndex >= window.slideShow.length){
+                  window.slideShowIndex = 0;
+                }else{
+                  window.slideShowIndex++;
+                }
+
+                jQuery('#slideShowImg').attr('src', window.slideShow[window.slideShowIndex]);
+              }, 3000);
+</script>
+
 		<div id="headerContent">
 			<div id="headerLeft">
 				<div id="left">
 					<h1>Movies This Week on Spuul</h1>
 					<!-- slideshow -->
-					<?php echo do_shortcode('[slideshow id=1]') ;?>
+<div id="slideshow_1" class="ngg-slideshow" style="height:240px;width:320px;">
+             <?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:absolute;top:0px;left:0px;display:block;z-index:4'>" ?>        
+</div>
+
 					<div style="clear:both;"></div>
 					<div id="movieThumbWeek">
 						<?php echo do_shortcode('[nggallery id=2]') ;?>
