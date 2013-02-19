@@ -17,6 +17,7 @@ if ( ! function_exists( 'twentyeleven_posted_on' ) ) {
 }
 
 // disable theme switching
+/*
 add_action( 'admin_init', 'wplg_lock_theme' );  
 function wplg_lock_theme() {
     global $submenu, $userdata;
@@ -26,7 +27,7 @@ function wplg_lock_theme() {
         unset( $submenu['themes.php'][15] );
     }
 }
-
+*/
 
 ?>
 
