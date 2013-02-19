@@ -403,6 +403,17 @@ body {
 
 /* ADDED CSS */
 
+.headerFix{
+	clear: both;
+	display: none;
+}
+
+#header1{
+	width: 100%;
+	padding: 10px 20px;
+}
+
+
 #headerContent{
 position: relative;
 top: -40px;
@@ -411,7 +422,7 @@ padding: 0px;
 }
 
 #headerContent h1{
-	margin: 57px 0 0 0;
+	margin: 15px 0 0;
 	font-family: 'Raleway',Helvetica,sans-serif;
 	color: #fff;
 	font-size: 30px;
@@ -434,13 +445,14 @@ padding: 0px;
 
 #headerLeft{
 	position: relative;
-	width: 85%;
+	width: 55%;
 }
 
 #headerLeft #left{
 	padding-left: 20px;
-	width: 68%;
+	width: 100%;
 	float: left;
+	margin: 10px 0 0px;
 }
 
 #headerContent #movieThumbWeek{
@@ -458,7 +470,7 @@ padding: 0px;
 .ngg-slideshow{
 	width: 100% !important;
 	float: left;
-	margin: 128px 0 0;
+	margin: 80px 0 0;
 }
 
 .ngg-slideshow img{
@@ -471,7 +483,6 @@ padding: 0px;
 }
 
 #branding .logo{
-	margin: 50px 0 0 20px;
 	width: 276px;
 }
 
@@ -567,7 +578,7 @@ padding: 0px;
 	width: 49%;
 }
 
-.ngg-galleryoverview #ngg-image-6{
+.ngg-galleryoverview #ngg-image-6{}
 	position: relative;
 	left: 2%;
 }
@@ -1023,8 +1034,8 @@ a:hover {
 	border-color: #333;
 	color: #666;
 	position: relative;
-	top: -50px;
-	left: -100px;
+	top: -45px;
+	left: -50px;
 	font-family: "Raleway", helvetica, sans-serif;
 
 }
@@ -2642,6 +2653,15 @@ p.comment-form-comment {
 
 	/* new css */
 
+	.headerFix{
+		background: #424242;
+		display: block;
+	}
+
+	#headerContent{
+		background: #424242;
+	}
+
 	#headerLeft{
 		position: relative;
 		width: 90%;
@@ -2703,7 +2723,7 @@ p.comment-form-comment {
 	}
 
 	#branding .only-search #s {
-		margin: 5px 0 0 0;
+		margin: 0 0 0 0;
 	}
 
 	.spuul_logo{
@@ -2864,10 +2884,14 @@ p.comment-form-comment {
 		height: 40em;
 	}
 
+	#branding .only-search #s,
+	#branding .only-search #s:focus {
+		width: 33%;
+	}
+
 	#branding .only-search #searchform {
 	z-index: 1;
 	position: relative;
-	top:40px;
 	}
 
 	#movieExtras #extraButton{
@@ -2880,7 +2904,7 @@ p.comment-form-comment {
 	}
 
 	#branding .logo{
-	margin: 20px 0 0 20px;
+	margin: 10px 0 0 10px;
 	width: 200px;
 	}
 
@@ -2899,8 +2923,8 @@ p.comment-form-comment {
 	}
 
 	#branding .only-search #s {
-		margin: 15px -75px 0 0;
-		width: 70%;
+		margin: 0px;
+		width: 30%;
 	}
 
 	#bannerImg{
@@ -3019,6 +3043,10 @@ p.comment-form-comment {
 		position: relative;
 	}
 
+	#branding .only-search #s{
+		top: 30px;
+		width: 70%;
+	}
 
 	#headerContent .padding_header {
 		width: 90%;
