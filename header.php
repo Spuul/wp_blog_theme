@@ -100,21 +100,20 @@ $query_images = new WP_Query( $query_images_args );
 $images = array(); $count = 0;
 $image_names = array();
 foreach ( $query_images->posts as $image) {
-    if( strpos($image->post_name, "coming") !== FALSE ){
-       $images[]= wp_get_attachment_url( $image->ID );
-    }   
+      $alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);
+      if( strpos($alt, "slider") !== FALSE ){
+         $images[]= wp_get_attachment_url( $image->ID );
+      }
 }
 ?>
-<?php print_r($images); ?>
 
 <script type='text/javascript'>
   var slideShow = <?php echo json_encode($images); ?>;
   var slideShowIndex = 0;
   setInterval(function(){
+                window.slideShowIndex++;
                 if(window.slideShowIndex >= window.slideShow.length){
                   window.slideShowIndex = 0;
-                }else{
-                  window.slideShowIndex++;
                 }
 
                 jQuery('#slideShowImg').attr('src', window.slideShow[window.slideShowIndex]);
