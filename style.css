@@ -1032,13 +1032,13 @@ a:hover {
 	color: #666;
 	position: relative;
 	top: -45px;
-	left: -40px;
+	left: -20px;
 	font-family: "Raleway", helvetica, sans-serif;
 
 }
 #branding .only-search #s,
 #branding .only-search #s:focus {
-	width: 29%;
+	width: 31%;
 }
 #branding .only-search #s:focus {
 	background-color: #fff;
