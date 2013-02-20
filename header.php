@@ -174,26 +174,16 @@ foreach ( $query_images->posts as $image) {
 }
 ?>
 
-
 <script type='text/javascript'>
   var slideShow = <?php echo json_encode($images); ?>;
   var slideShowIndex = 0;
   setInterval(function(){
-                
+                window.slideShowIndex++;
                 if(window.slideShowIndex >= window.slideShow.length){
                   window.slideShowIndex = 0;
-                 
-
-                }else{
-                   window.slideShowIndex++;
-
                 }
 				jQuery('#slideShowImg').attr('src', window.slideShow[window.slideShowIndex]);
-				console.log(window.slideShowIndex, window.slideShow[window.slideShowIndex]);
-				                console.log(jQuery('#slideShowImg').attr('src'));
-
-              }, 3000);                        
-
+  }, 3000);
 </script>
 
 
@@ -203,17 +193,15 @@ foreach ( $query_images->posts as $image) {
 					<h1>Movies This Week on Spuul</h1>
 					<!-- slideshow -->
 		        	<div id="slideshow_1" class="ngg-slideshow">
-		             	<!--<h1><?php// echo print_r($image_names[0]); ?></h1>-->
 		             	<?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?> 
-		      
 	          		</div>
 
 					<div style="clear:both;"></div>
 					<div id="movieThumbWeek">
 						<img src="<?php echo $header_thumb[0]; ?>" class="header_thumb"/>
 						<img src="<?php echo $header_thumb[1]; ?>" class="header_thumb gap"/>
-						<img src="<?php echo $header_thumb[0]; ?>" class="header_thumb hideIfSmall"/>
-						<img src="<?php echo $header_thumb[1]; ?>" class="header_thumb hideIfSmall gap"/>
+						<img src="<?php echo $header_thumb[2]; ?>" class="header_thumb hideIfSmall"/>
+						<img src="<?php echo $header_thumb[3]; ?>" class="header_thumb hideIfSmall gap"/>
 						<script>
 							$(document).ready(function(){
 							windowSize = $(window).width();
