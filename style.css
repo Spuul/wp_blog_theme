@@ -148,7 +148,7 @@ body {
 }
 
 .movielist .desc{
-	width: 35%;
+	width: 60%;
 	float: left;
 	margin: -20px 0 0 0;
 }
@@ -182,7 +182,7 @@ body {
 	margin: 0px 0 10px;
 }
 #secondary {
-	margin: 20px 0 0 0;
+	margin: 0px 0 0 0;
 	/*padding: 2%;*/
 	float: left;
 	/*margin-right: 2%;*/
@@ -447,7 +447,6 @@ padding: 0px;
 	width: 49%;
 	float: left;
 }
-
 
 #slideshow_1{
 	height: 100%;
@@ -1111,10 +1110,10 @@ a:hover {
 .entry-title a {
 	padding: 10px 0 0px;
 	font-family: 'Raleway', helvetica, sans-serif;
-	color: #333;
+	color: #555;
 	text-decoration: none;
 	font-weight: 400;
-	font-size: 40px;
+	font-size: 30px;
 	line-height: 1;
 	margin: 0px 0px 5px 0;
 	text-shadow: 1px 1px 0px rgba(255,255,255,.2); /* 50% white from bottom */
@@ -2697,9 +2696,9 @@ p.comment-form-comment {
 	width: 95%;
 	padding: 0px 2.5% 0 2.5%;
 	float: left;
-	margin: 3em 0 15px 0px;
+	margin: -80px 0 15px 0px;
 	background: #424242;
-	height: 45em;
+	height: 37em;
 	}
 
 	.featured{
@@ -2872,15 +2871,6 @@ p.comment-form-comment {
 		margin: 0px 0 0 0;
 	}
 
-	#headerContent .padding_header {
-		width: 95%;
-		padding: 0px 2.5% 0 2.5%;
-		float: left;
-		margin: 3em 0 15px 0px;
-		background: #424242;
-		height: 40em;
-	}
-
 	#branding .only-search #s,
 	#branding .only-search #s:focus {
 		width: 33%;
@@ -3049,7 +3039,7 @@ p.comment-form-comment {
 		width: 90%;
 		padding: 0px 5% 0 5%;
 		float: left;
-		margin: 1.5em 0 15px 0px;
+		margin: -80px 0 15px 0px;
 		background: #424242;
 		height: 35em;
 	}
