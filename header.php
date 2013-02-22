@@ -164,18 +164,23 @@ $query_images = new WP_Query( $query_images_args );
 $images = array(); 
 $header_thumb = array();
 $image_names = array();
+$imagelink1 = array();
+$imagelink2 = array();
 foreach ( $query_images->posts as $image) {
     $alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);
-    if( strpos($alt, "slider") !== FALSE ){
+    if( strpos($alt, "/?") !== FALSE ){
        $images[]= wp_get_attachment_url( $image->ID );
-    }elseif(strpos($alt, "header_thumb") !== FALSE ){
+       $imagelink1[] = $alt;
+    }elseif(strpos($alt, "http://") !== FALSE ){
        $header_thumb[]= wp_get_attachment_url( $image->ID );
+       $imagelink2[] = $alt;
     }
 }
 ?>
 
 <script type='text/javascript'>
   var slideShow = <?php echo json_encode($images); ?>;
+  var slideShowURL = <?php echo json_encode($$imagelink1); ?>;
   var slideShowIndex = 0;
   setInterval(function(){
                 window.slideShowIndex++;
@@ -183,6 +188,7 @@ foreach ( $query_images->posts as $image) {
                   window.slideShowIndex = 0;
                 }
 				jQuery('#slideShowImg').attr('src', window.slideShow[window.slideShowIndex]);
+				jQuery('#slideshow_1 .slideshowLink').attr('href', window.slideShowURL[window.slideShowIndex]);
   }, 3000);
 </script>
 
@@ -193,45 +199,21 @@ foreach ( $query_images->posts as $image) {
 					<h1>Movies This Week on Spuul</h1>
 					<!-- slideshow -->
 		        	<div id="slideshow_1" class="ngg-slideshow">
-		             	<?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?> 
+		             	<a class="slideshowLink" href="<?php echo $imagelink1[0]; ?>"><?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?></a> 
 	          		</div>
 
 					<div style="clear:both;"></div>
 					<div id="movieThumbWeek">
-						<img src="<?php echo $header_thumb[0]; ?>" class="header_thumb"/>
-						<img src="<?php echo $header_thumb[1]; ?>" class="header_thumb gap"/>
-						<img src="<?php echo $header_thumb[2]; ?>" class="header_thumb hideIfSmall"/>
-						<img src="<?php echo $header_thumb[3]; ?>" class="header_thumb hideIfSmall gap"/>
-						<script>
-							$(document).ready(function(){
-							windowSize = $(window).width();
-							if(windowSize >880){
-								$('.hideIfSmall').css('display','none');
-							}
-
-							function resize_window(){
-								windowSize = $(window).width();
-								if(windowSize <= 880){
-									$('.hideIfSmall').fadeIn('slow');
-								}else{
-									$('.hideIfSmall').fadeOut('fast');
-								}
-							}
-
-							$(window).resize(function(){
-								resize_window();
-							});
-
-							});
-
-							
-						</script>
+						<a href="<?php echo $imagelink2[0]; ?>"><img src="<?php echo $header_thumb[0]; ?>" class="header_thumb"/></a>
+						<a href="<?php echo $imagelink2[1]; ?>"><img src="<?php echo $header_thumb[1]; ?>" class="header_thumb gap"/></a>
 					</div>
 				</div>
 			</div>
-			<div class="padding_header featured">
-				<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
-				<div style="clear:both;"></div>
+			<div id="headerRight">
+				<div class="padding_header featured">
+					<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
+					<div style="clear:both;"></div>
+				</div>
 			</div>
 		</div>
 

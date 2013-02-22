@@ -85,7 +85,7 @@ body {
 #primary {
 	float: left;
 	/*margin: 0 -26.4% 0 0;*/
-	width: 60%;
+	width: 55%;
 }
 #content {
 
@@ -186,7 +186,7 @@ body {
 	/*padding: 2%;*/
 	float: left;
 	/*margin-right: 2%;*/
-	width: 40%;
+	width: 45%;
 }
 
 #secondary .padding{
@@ -436,7 +436,7 @@ padding: 0px;
 }
 
 #headerContent .padding_header{
-	width: 37%;
+	width: 92%;
 	float: right;
 	margin: -90px 0 0 0px;
 	height: 36em;
@@ -468,15 +468,21 @@ padding: 0px;
 	padding-left: 2%;
 }
 
+#headerRight{
+	width: 45%;
+	float: left;
+}
+
 #headerLeft{
 	position: relative;
 	width: 55%;
 	height: auto;
+	float: left;
 }
 
 #headerLeft #left{
 	padding-left: 20px;
-	width: 100%;
+	width: 96%;
 	float: left;
 	margin: 17px 0 0px;
 	padding-bottom: 2em;
