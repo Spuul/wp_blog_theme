@@ -63,7 +63,16 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 
 /* =Structure
@@ -85,7 +94,7 @@ body {
 #primary {
 	float: left;
 	/*margin: 0 -26.4% 0 0;*/
-	width: 55%;
+	width: 57%;
 }
 #content {
 
@@ -182,15 +191,15 @@ body {
 	margin: 0px 0 10px;
 }
 #secondary {
-	margin: 0px 0 0 0;
+	margin: 10px 0 0 0;
 	/*padding: 2%;*/
 	float: left;
 	/*margin-right: 2%;*/
-	width: 45%;
+	width: 43%;
 }
 
 #secondary .padding{
-	padding-left: 30px;
+	padding-left: 10px;
 }
 
 /* Singular */
@@ -418,12 +427,23 @@ body {
 	padding: 10px 0px;
 }
 
+#headerFull{
+	width: 100%;
+	background: url(images/headerBg.jpg) #424242 repeat-x scroll 0px 0px;
+	height: auto;
+}
+
+#headerFull .max-width{
+	max-width: 1000px;
+	margin: 0px auto;
+}
 
 #headerContent{
-position: relative;
-top: -40px;
-width: 100%;
-padding: 0px;
+	margin: 24px 0 0 0;
+	max-width: 100%;
+	position: relative;
+	top: -40px;
+	padding: 0px;
 }
 
 #headerContent h1{
@@ -438,13 +458,13 @@ padding: 0px;
 #headerContent .padding_header{
 	width: 92%;
 	float: right;
-	margin: -90px 0 0 0px;
-	height: 36em;
+	margin: -3px 0 0 0px;
+	height: auto;
 	padding-right: 20px;
 }
 
 #headerContent .movieWeek{
-	width: 49%;
+	width: 49%
 	float: left;
 }
 
@@ -473,6 +493,32 @@ padding: 0px;
 	float: left;
 }
 
+#headerRight #hupso_toolbar_0, .hupso_toolbar{
+	display: none;
+}
+
+#headerRight img{
+	border: none;
+}
+
+#headerRight h1{
+	margin: -55px 0 0 0;
+}
+
+#headerRight p{
+	margin: 0px 0 0 0;
+	color: #fff;
+	font-size: 13px;
+}
+
+#headerRight .padding_header{
+	margin: 89px 0 -30px 0;
+}
+
+#headerRight .padding_header_left{
+	padding-left: 20px;
+}
+
 #headerLeft{
 	position: relative;
 	width: 55%;
@@ -485,12 +531,11 @@ padding: 0px;
 	width: 96%;
 	float: left;
 	margin: 17px 0 0px;
-	padding-bottom: 2em;
 }
 
 #headerContent #movieThumbWeek{
 	width: 100%;
-	margin: 0px 0 0 0px;
+	margin: .25em 0 -30px 0px;
 	float: left;
 }
 
@@ -603,68 +648,22 @@ padding: 0px;
 	border: thin red solid;
 }
 
-/* FOOTER video css */
-
-.html5playerer-default{
-	width: 85% !important;
-	position: relative;
-	top: 50px;
-	margin: 0px auto !important;
+#recent_movies h1.titlePost{
+	padding: 10px 0 0px;
+	font-family: 'Raleway', helvetica, sans-serif;
+	color: #333;
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 1;
+	margin: 0px 0px 20px 0;
+	text-shadow: 1px 1px 0px rgba(255,255,255,.2); /* 50% white from bottom */
 }
 
-.minplayer-default-preview{
-
-}
-
-.html5playerer-default-playlist-pager{
-	display: none !important;
-}
-
-.minplayer-default-timer{
-	color: #ffffff;
-}
-
-.minplayer-default-volume{
-	background: url('images/vol_icon.png') no-repeat bottom;
-	width: 24px;
-	height: 24px;
-	right: 20px !important;
-}
-
-.player-ui .html5playerer-default-playlist-scroll {
-	position: absolute;
-	overflow: scroll !important;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 32px;
-}
-
-.minplayer-default-fullscreen-inner, .minplayer-default-fullscreen{
-	width: 16px;
-	height: 8px;
+#recent_movies .hupso_c{
 	display: none;
 }
 
-.html5playerer-default-teaser-image img{
-	display: block !important;
-	width: 100%;
-}
-
-.minplayer-default-preview img{
-	display: block !important;
-	width: 100% !important;
-	height: auto !important;
-	margin: 0px auto !important;
-}
-
-.html5playerer-default-teaser-title{
-	color: #ffffff;
-}
-
-.html5playerer-default{
-	border: none !important;
-}
 
 
 /* =Global
@@ -1043,7 +1042,7 @@ a:hover {
 }
 #branding .only-search #s,
 #branding .only-search #s:focus {
-	width: 31%;
+	width: 35%;
 }
 #branding .only-search #s:focus {
 	background-color: #fff;
@@ -1116,7 +1115,7 @@ a:hover {
 .entry-title a {
 	padding: 10px 0 0px;
 	font-family: 'Raleway', helvetica, sans-serif;
-	color: #555;
+	color: #333;
 	text-decoration: none;
 	font-weight: 400;
 	font-size: 30px;
@@ -2162,9 +2161,10 @@ section.recent-posts .other-recent-posts li:after {
 .widget-title {
 	font-weight: 300;
 	font-family: "Raleway",helvetica, sans-serif;
-	color: #343534z;
-	font-size: 20px;
-	line-height: 2.6em;
+	color: #343534;
+	font-size: 30px;
+	margin: 0 0 25px 0;
+	line-height: 1em;
 }
 .widget ul {
 	font-size: 15px;
@@ -2653,7 +2653,17 @@ p.comment-form-comment {
 	padding: 0 0px;
 	}
 
+	#headerFull{
+		margin: 0 0 -40px 0;
+	}
+
 	/* new css */
+
+	#headerRight{
+		margin: 15px 0 0 0;
+		float: left;
+		width: 100%;
+	}
 
 	.headerFix{
 		background: #424242;
@@ -2666,19 +2676,20 @@ p.comment-form-comment {
 
 	#headerLeft{
 		position: relative;
-		width: 90%;
+		width: 100%;
 	}
 
 	#headerLeft #left{
-	width: 100%;
+	width: 95%;
 	float: left;
+	padding: 0 0 0 2.5%;
 	}
 
 	#headerContent #movieThumbWeek{
 		width: 100%;
-		margin: 10px 0 0 0px;
+		margin: .6em 0 0 0px;
 		float: left;
-		display: none;
+		display: block;
 	}
 
 	#headerContent #movieThumbWeek li:last-child {
@@ -2699,16 +2710,26 @@ p.comment-form-comment {
 	}
 
 	#headerContent .padding_header {
-	width: 95%;
-	padding: 0px 2.5% 0 2.5%;
 	float: left;
-	margin: -80px 0 15px 0px;
+	width: 95%;
+	padding: 0px 0 0 2.5%;
+	float: left;
+	margin: 75px 0 15px 0px;
 	background: #424242;
-	height: 37em;
+	height: auto;
+	}
+
+	#headerRight .padding_header_left{
+		padding-left: 0;
+	}
+
+	#headerRight h1{
+		margin: -40px 0 0 0;
 	}
 
 	.featured{
 		display: block;
+		background: #424242 !important;
 	}
 
 	.post_title{
@@ -2869,6 +2890,15 @@ p.comment-form-comment {
 	body, input, textarea {
 		font-size: 15px;
 		font-weight: 300;
+	}
+
+	#headerContent .padding_header {
+		width: 95%;
+		padding: 0 0 0 2.5%;
+		float: left;
+		margin: 75px 0 15px 0px;
+		background: #424242;
+		height: auto;
 	}
 
 	.movielist .desc {
@@ -3036,25 +3066,22 @@ p.comment-form-comment {
 		position: relative;
 	}
 
-	#branding .only-search #s{
-		top: 30px;
-		width: 75%;
+	#headerContent #movieThumbWeek{
+		margin: .2em 0 0 0px;
 	}
 
 	#headerContent .padding_header {
-		width: 90%;
-		padding: 0px 5% 0 5%;
+		width: 95%;
+		padding: 0 0 0 2.5%;
 		float: left;
-		margin: -80px 0 15px 0px;
+		margin: -25px 0 0px 0px;
 		background: #424242;
-		height: 35em;
+		height: auto;
 	}
 
-	.ngg-slideshow{
-		width: 100% !important;
-		height: 150px !important;
-		float: left;
-		margin: 0 0 0;
+	#branding .only-search #s{
+		top: 30px;
+		width: 75%;
 	}
 
 	#movieExtras #extraButton{
@@ -3078,10 +3105,6 @@ p.comment-form-comment {
 
 	#bannerImg{
 		display: block;
-	}
-
-	#parallax{
-		display: none;
 	}
 
 	#content .gallery-columns-2 .gallery-item {
@@ -3128,10 +3151,6 @@ p.comment-form-comment {
 
 	#bannerImg{
 		display: block;
-	}
-
-	#parallax{
-		display: none;
 	}
 
 	.content_padding{

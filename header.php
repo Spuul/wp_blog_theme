@@ -83,7 +83,8 @@ $(window).load(function() {
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed">
+	<div id="headerFull">
+	<div class="max-width">	
 	<header id="branding" role="banner">
 	<div id="header1">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory');?>/images/logo.png ?>" class="logo" /></a>
@@ -168,10 +169,10 @@ $imagelink1 = array();
 $imagelink2 = array();
 foreach ( $query_images->posts as $image) {
     $alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);
-    if( strpos($alt, "/?") !== FALSE ){
+    if( strpos($alt, "/?slide") !== FALSE ){
        $images[]= wp_get_attachment_url( $image->ID );
        $imagelink1[] = $alt;
-    }elseif(strpos($alt, "http://") !== FALSE ){
+    }elseif(strpos($alt, "/?thumb") !== FALSE ){
        $header_thumb[]= wp_get_attachment_url( $image->ID );
        $imagelink2[] = $alt;
     }
@@ -180,7 +181,7 @@ foreach ( $query_images->posts as $image) {
 
 <script type='text/javascript'>
   var slideShow = <?php echo json_encode($images); ?>;
-  var slideShowURL = <?php echo json_encode($$imagelink1); ?>;
+  var slideShowURL = <?php echo json_encode($imagelink1); ?>;
   var slideShowIndex = 0;
   setInterval(function(){
                 window.slideShowIndex++;
@@ -192,7 +193,6 @@ foreach ( $query_images->posts as $image) {
   }, 3000);
 </script>
 
-
 		<div id="headerContent">
 			<div id="headerLeft">
 				<div id="left">
@@ -202,22 +202,40 @@ foreach ( $query_images->posts as $image) {
 		             	<a class="slideshowLink" href="<?php echo $imagelink1[0]; ?>"><?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?></a> 
 	          		</div>
 
-					<div style="clear:both;"></div>
+				
 					<div id="movieThumbWeek">
 						<a href="<?php echo $imagelink2[0]; ?>"><img src="<?php echo $header_thumb[0]; ?>" class="header_thumb"/></a>
 						<a href="<?php echo $imagelink2[1]; ?>"><img src="<?php echo $header_thumb[1]; ?>" class="header_thumb gap"/></a>
 					</div>
 				</div>
 			</div>
+
 			<div id="headerRight">
-				<div class="padding_header featured">
-					<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
-					<div style="clear:both;"></div>
+				<div class="padding_header">
+					<div class="padding_header_left">
+					<?php
+						$idNum = 162;
+						$my_postid = $idNum;//This is page id or post id
+						$content_post = get_post($my_postid);
+						$content = $content_post->post_content;
+						$content = apply_filters('the_content', $content);
+						$content = str_replace(']]>', ']]&gt;', $content);
+					?>
+					<h1><?php echo get_the_title($idNum); ?></h2>
+					<?php
+						echo $content; 
+					?>
+					
+					</div>
 				</div>
 			</div>
+		<div style="clear:both;"></div>
 		</div>
-
 	</header><!-- #branding -->
+	</div><!-- max-width -->
+	</div><!-- headerFull-->
+
+<div id="page" class="hfeed">
 
 
 	<div id="main">

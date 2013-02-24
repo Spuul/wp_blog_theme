@@ -7,6 +7,38 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
 
+					<!-- count number of draft post -->
+					<?php
+					$count_posts = wp_count_posts();
+					$draft_posts = $count_posts->draft;
+
+					for($d=0; $d<$draft_posts; $d++){
+
+					}
+					?>
+
+					<div class="content_padding">
+						<ul id="recent_movies">
+							<h1 class="titlePost">Recent Movies</h1>
+							<?php
+							global $post;
+							$args = array( 'numberposts' => 5, 'offset'=> 0, 'category' => 5, 'post_status' => draft );
+							$myposts = get_posts( $args );
+			
+							foreach( $myposts as $post ) :	setup_postdata($post); ?>
+								<?php
+									the_content(); // output the post text
+									$pos[] = strpos( get_the_content(), "Lorem" );
+
+									if (!(FALSE === $pos) ) {  // the === is important; see php docs
+									    echo $pos;
+									}
+								?>
+								<li><?php// the_content(); ?></li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+
 					<?php if ( have_posts() ) : ?>
 
 						<?php twentyeleven_content_nav( 'nav-above' ); ?>
