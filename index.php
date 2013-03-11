@@ -7,37 +7,31 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
 
-					<!-- count number of draft post -->
-					<?php
-					$count_posts = wp_count_posts();
-					$draft_posts = $count_posts->draft;
-
-					for($d=0; $d<$draft_posts; $d++){
-
-					}
-					?>
-
-					<div class="content_padding">
-						<ul id="recent_movies">
-							<h1 class="titlePost">Recent Movies</h1>
-							<?php
-							global $post;
-							$args = array( 'numberposts' => 5, 'offset'=> 0, 'category' => 5, 'post_status' => draft );
-							$myposts = get_posts( $args );
-			
-							foreach( $myposts as $post ) :	setup_postdata($post); ?>
-								<?php
-									the_content(); // output the post text
-									$pos[] = strpos( get_the_content(), "Lorem" );
-
-									if (!(FALSE === $pos) ) {  // the === is important; see php docs
-									    echo $pos;
-									}
-								?>
-								<li><?php// the_content(); ?></li>
-							<?php endforeach; ?>
-						</ul>
+				<div class="content_padding" style="display:none;">
+					<div id="recent_movies">
+						<h1 class="titlePost">Recent Movies</h1>
+						<?php
+						global $post;
+						//cat staging 25, local 5
+						$args = array( 'numberposts' => 5, 'offset'=> 0, 'category' => 25, 'post_status' => draft );
+						$myposts = get_posts( $args );
+		
+						foreach( $myposts as $post ) :	setup_postdata($post); ?>
+							<div style="display:none;"><?php the_content(); // recent movie container ?>
+							</div>
+							<script type="text/javascript">
+								$('.movieCol').each(function(){
+									$('#movielist')
+										.append('<li class="movieCol"><img src="'+$(this).children('img').attr('src')+'"/><div class="desc"><ul><li><h1>'+$(this).find('h1').text()+'</h1></li><li><a href="'+$(this).find('a').attr('href')+'">'+$(this).find('a').text()+'</a></li><li><p>'+$(this).find('p').text()+'</p></li></ul></div></li>');
+								});
+							</script>
+							<ul id="movielist">
+							</ul>
+						<?php endforeach; ?>
 					</div>
+					<div style="clear:both;"></div>
+				</div>
+
 
 					<?php if ( have_posts() ) : ?>
 

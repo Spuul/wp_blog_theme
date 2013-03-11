@@ -5,7 +5,7 @@ Author: Spuul Developer
 Author URI: www.spuul.com
 Description: The Spuul blog website. 
 Template: twentyeleven
-Version: 2.0.0
+Version: 2.1.0
 Text Domain: Spuul
 */
 
@@ -102,77 +102,95 @@ body {
 
 /*  POST CSS */
 
+.padding_header_left div{
+	display: none;	
+}
+
 .type-post{
 	padding-bottom: 20px !important;
 	border-bottom: 2px #fff solid !important;
 }
 
-.cast ul,.cast p,.desc ul,.desc p,.movielist{
+.cast ul,.cast p,.desc ul,.desc p,.movieCol{
 	padding: 0;
 	margin: 0;
 }
 
-.movielist{
+ul#movielist{
+	margin: 0px;
+}
+
+ul#movielist li{
+	float: left;
+	clear: both;
+}
+
+.movieCol{
 	padding: 5px 0px 5px;
-	margin: 3px 0;
+	margin: 10px 0 15px 0;
 	width: 100%;
 }
 
-.movielist .highlight{
+.movieCol h1{
+	margin: 10px 0 5px;
+}
+
+.movieCol .highlight{
 	font-weight: 600;
 }
 
-.movielist h1,h2,h3{
+.movieCol h1,h2,h3{
 	font-family: helvetica,sans-serif;
 	color: #333;
 	font-weight: normal;
 }
 
-.movielist h2{
+.movieCol h2{
 	font-weight: bold;
 	color:#000;
 	font-size: 24px;
 	margin: 0 0 0px;
 }
 
-.movielist h3{
+.movieCol h3{
 	font-size: 14px;
 }
 
-.movielist h2:hover,.movielist h3:hover{
+.movieCol h2:hover,.movieCol h3:hover{
 	text-decoration: none;
 }
 
-.movielist p{
+.movieCol p{
 	font-family: helvetica, sans-serif;
 	font-size: 12px;
 	color:#373737;
 	font-weight: 300;
+	text-align: justify;
 }
 
-.movielist img{
+.movieCol img{
 	float: left;
-	margin: 0 10px 10px 0px;
+	margin: 12px 10px 0px 0px;
 	padding: 0px 10px 0px 0;
 }
 
-.movielist .desc{
+.movieCol .desc{
 	width: 60%;
 	float: left;
 	margin: -20px 0 0 0;
 }
 
-.movielist .desc ul{
+.movieCol .desc ul{
 }
 
-.movielist li{
+.movieCol li{
 	list-style: none;
 	margin: 0px 0;
 	line-height: 14px;
 	font-size: 12px;
 }
 
-.movielist .cast{
+.movieCol .cast{
 	margin: 10px 0;
 	clear: both;
 	background: #efefef;
@@ -180,11 +198,14 @@ body {
 	width: 100%;
 }
 
-.movielist .synopsis{
+.movieCol .synopsis{
 	line-height: 15px; 
 }
 
-
+#page .content_padding{
+	padding: 20px 20px;
+	margin: 0px 0 10px;
+}
 
 .content_padding{
 	padding: 20px 20px;
@@ -508,7 +529,7 @@ body {
 #headerRight p{
 	margin: 0px 0 0 0;
 	color: #fff;
-	font-size: 13px;
+	font-size: 14px;
 }
 
 #headerRight .padding_header{
@@ -646,6 +667,10 @@ body {
 #logoHead{
 	width: 100%;
 	border: thin red solid;
+}
+
+#recent_movies{
+	margin: 0px;
 }
 
 #recent_movies h1.titlePost{
@@ -2117,13 +2142,20 @@ section.recent-posts .other-recent-posts li:after {
 }
 .nav-previous {
 	float: left;
-	width: 50%;
+	width: auto;
 }
 .nav-next {
 	float: right;
 	text-align: right;
-	width: 50%;
+	width: auto;
 }
+
+.nav-next a, .nav-previous a{
+	color: #fff;
+	background: #000;
+	padding: 5px 10px;
+}
+
 #content nav .meta-nav {
 	font-weight: normal;
 }
@@ -2679,7 +2711,7 @@ p.comment-form-comment {
 		width: 100%;
 	}
 
-	#headerLeft #left{
+	#headerContent #headerLeft #left{
 	width: 95%;
 	float: left;
 	padding: 0 0 0 2.5%;
@@ -2901,7 +2933,7 @@ p.comment-form-comment {
 		height: auto;
 	}
 
-	.movielist .desc {
+	.movieCol .desc {
 		width: 100%;
 		float: left;
 		margin: 0px 0 0 0;
@@ -3092,7 +3124,7 @@ p.comment-form-comment {
 	cursor: pointer;
 	}
 
-	.movielist .desc {
+	.movieCol .desc {
 	width: 100%;
 	float: left;
 	margin: 0px 0 0 0;

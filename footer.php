@@ -9,7 +9,7 @@
 			<img src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/02/extrasup.jpg" />
 		</div>
 		<div id="extraContainer">
-			<ul style="display:none;" id="movieContainer">
+			<!--<ul style="display:none;" id="movieContainer">
 				<?php
 			/* A sidebar in the footer? Yep. You can can customize
 			 * your footer with three columns of widgets.
@@ -17,7 +17,7 @@
 			if ( ! is_404() )
 				get_sidebar( 'footer' );
 				?>
-			</ul>
+			</ul> -->
 			<?php //echo do_shortcode('[html5video id=3]'); ?>
 		</div>
 	</div>

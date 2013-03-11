@@ -199,13 +199,13 @@ foreach ( $query_images->posts as $image) {
 					<h1>Movies This Week on Spuul</h1>
 					<!-- slideshow -->
 		        	<div id="slideshow_1" class="ngg-slideshow">
-		             	<a class="slideshowLink" href="<?php echo $imagelink1[0]; ?>"><?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?></a> 
+		             	<a class="slideshowLink" href="<?php echo $imagelink1[0]; ?>" target="_blank"><?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?></a> 
 	          		</div>
 
 				
 					<div id="movieThumbWeek">
-						<a href="<?php echo $imagelink2[0]; ?>"><img src="<?php echo $header_thumb[0]; ?>" class="header_thumb"/></a>
-						<a href="<?php echo $imagelink2[1]; ?>"><img src="<?php echo $header_thumb[1]; ?>" class="header_thumb gap"/></a>
+						<a href="<?php echo $imagelink2[0]; ?>" target="_blank"><img src="<?php echo $header_thumb[0]; ?>" class="header_thumb"/></a>
+						<a href="<?php echo $imagelink2[1]; ?>" target="_blank"><img src="<?php echo $header_thumb[1]; ?>" class="header_thumb gap"/></a>
 					</div>
 				</div>
 			</div>
@@ -214,7 +214,7 @@ foreach ( $query_images->posts as $image) {
 				<div class="padding_header">
 					<div class="padding_header_left">
 					<?php
-						$idNum = 162;
+						$idNum = 162;//838 blog staging //162 localhost
 						$my_postid = $idNum;//This is page id or post id
 						$content_post = get_post($my_postid);
 						$content = $content_post->post_content;

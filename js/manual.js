@@ -35,5 +35,9 @@ $(document).ready(function(){
 		alert('clicked');
 		return false;
 	});
+
+	/*Pagination */
+
+	
 });
 
