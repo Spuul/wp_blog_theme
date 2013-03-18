@@ -183,14 +183,21 @@ foreach ( $query_images->posts as $image) {
   var slideShow = <?php echo json_encode($images); ?>;
   var slideShowURL = <?php echo json_encode($imagelink1); ?>;
   var slideShowIndex = 0;
+
+  //$('#slideshow_1').append('<img src="http://development.static.spuul.com/wordpress/wp-content/uploads/2013/03/large_0428d5f54a_dirtypicture.jpg">');
+
+  
+
+
   setInterval(function(){
                 window.slideShowIndex++;
                 if(window.slideShowIndex >= window.slideShow.length){
                   window.slideShowIndex = 0;
                 }
-				jQuery('#slideShowImg').attr('src', window.slideShow[window.slideShowIndex]);
-				jQuery('#slideshow_1 .slideshowLink').attr('href', window.slideShowURL[window.slideShowIndex]);
-  }, 3000);
+				$('#slideShowImg').attr('src', window.slideShow[window.slideShowIndex]);
+				$('#slideshow_1 .slideshowLink').attr('href', window.slideShowURL[window.slideShowIndex]);
+  }, 3000); 
+
 </script>
 
 		<div id="headerContent">
@@ -199,7 +206,7 @@ foreach ( $query_images->posts as $image) {
 					<h1>Movies This Week on Spuul</h1>
 					<!-- slideshow -->
 		        	<div id="slideshow_1" class="ngg-slideshow">
-		             	<a class="slideshowLink" href="<?php echo $imagelink1[0]; ?>" target="_blank"><?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?></a> 
+		             	<a class="slideshowLink" href="<?php echo $imagelink1[0]; ?>" target="_blank"><?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?></a>
 	          		</div>
 
 				
@@ -214,7 +221,7 @@ foreach ( $query_images->posts as $image) {
 				<div class="padding_header">
 					<div class="padding_header_left">
 					<?php
-						$idNum = 162;//838 blog staging //162 localhost
+						$idNum = 838;//838 blog staging //162 localhost 
 						$my_postid = $idNum;//This is page id or post id
 						$content_post = get_post($my_postid);
 						$content = $content_post->post_content;
@@ -231,6 +238,7 @@ foreach ( $query_images->posts as $image) {
 			</div>
 		<div style="clear:both;"></div>
 		</div>
+
 	</header><!-- #branding -->
 	</div><!-- max-width -->
 	</div><!-- headerFull-->
