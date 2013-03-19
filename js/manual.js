@@ -29,14 +29,9 @@ $(document).ready(function(){
 		//$('#movieExtras #extraContainer').hide('down');
 	});
 
-	/*AVS load*/
-
-	$('avs_gallery').bind('click',function(){
-		alert('clicked');
-		return false;
+	$('#searchform .field').focus(function(){
+		//$('.logo').css('display','none');
 	});
-
-	/*Pagination */
 
 	
 });

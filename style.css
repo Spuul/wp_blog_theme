@@ -22,7 +22,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: 'Raleway', helvetica, sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	font-size: 100%;
 	font-style: inherit;
 	font-weight: 300;
@@ -444,7 +444,8 @@ ul#movielist li{
 
 #header1{
 	width: 100%;
-	padding: 10px 0px;
+	padding: 10px 0px 0px;
+	height: 75px;
 }
 
 #headerFull{
@@ -459,16 +460,16 @@ ul#movielist li{
 }
 
 #headerContent{
-	margin: 34px 0 0 0;
+	margin: 0px 0 0 0;
 	max-width: 100%;
 	position: relative;
-	top: -40px;
+	top: 0px;
 	padding: 0px;
 }
 
 #headerContent h1{
-	margin: 8px 0 6px;
-	font-family: 'Raleway',Helvetica,sans-serif;
+	margin: -5px 0 6px;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
 	font-size: 30px;
 	font-weight: 200 !important;
@@ -510,6 +511,7 @@ ul#movielist li{
 }
 
 #headerRight{
+	margin: 18px 0 0;
 	width: 45%;
 	float: left;
 }
@@ -523,7 +525,7 @@ ul#movielist li{
 }
 
 #headerRight h1{
-	margin: -55px 0 0 0;
+	margin: -67px 0 0 0;
 }
 
 #headerRight p{
@@ -533,11 +535,12 @@ ul#movielist li{
 }
 
 #headerRight .padding_header{
-	margin: 45px 0 -35px 0;
+	margin: 45px 0 0px 0;
 }
 
 #headerRight .padding_header_left{
 	padding-left: 20px;
+	padding-bottom: 20px;
 }
 
 #headerLeft{
@@ -551,12 +554,12 @@ ul#movielist li{
 	padding-left: 20px;
 	width: 96%;
 	float: left;
-	margin: -17px 0 5px;
+	margin: 0px 0 0px;
 }
 
 #headerContent #movieThumbWeek{
 	width: 100%;
-	margin: .25em 0 -30px 0px;
+	margin: .25em 0 20px 0px;
 	float: left;
 }
 
@@ -582,8 +585,8 @@ ul#movielist li{
 }
 
 #branding .logo{
-	width: 276px;
-	margin: 0 0 0 20px;
+	width: 200px;
+	margin: 10px 0 0 20px;
 }
 
 #logo_menu{
@@ -666,7 +669,6 @@ ul#movielist li{
 
 #logoHead{
 	width: 100%;
-	border: thin red solid;
 }
 
 #recent_movies{
@@ -675,7 +677,7 @@ ul#movielist li{
 
 #recent_movies h1.titlePost{
 	padding: 10px 0 0px;
-	font-family: 'Raleway', helvetica, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #333;
 	text-decoration: none;
 	font-weight: 400;
@@ -1062,7 +1064,7 @@ a:hover {
 	position: relative;
 	top: -45px;
 	left: -20px;
-	font-family: "Raleway", helvetica, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 
 }
 #branding .only-search #s,
@@ -1084,6 +1086,10 @@ a:hover {
 
 /* =Content
 ----------------------------------------------- */
+
+.padding30{
+	padding: 0 0px;
+}
 
 #main {
 	background: #f0eced;
@@ -1122,7 +1128,7 @@ a:hover {
 }
 .entry-title,
 .entry-header .entry-meta {
-	font-family: 'Raleway', helvetica, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	padding: 0px;
 }
 .entry-title {
@@ -1139,7 +1145,7 @@ a:hover {
 .entry-title,
 .entry-title a {
 	padding: 10px 0 0px;
-	font-family: 'Raleway', helvetica, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #333;
 	text-decoration: none;
 	font-weight: 400;
@@ -1181,7 +1187,7 @@ footer.entry-meta{
 .entry-content h2,
 .comment-content h1,
 .comment-content h2 {
-	font-family: 'Raleway', helvetica, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #000;
 	font-weight: bold;
 	margin: 0 0 .8125em;
@@ -2192,7 +2198,7 @@ section.recent-posts .other-recent-posts li:after {
 }
 .widget-title {
 	font-weight: 300;
-	font-family: "Raleway",helvetica, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #343534;
 	font-size: 30px;
 	margin: 0 0 25px 0;
@@ -2672,7 +2678,7 @@ p.comment-form-comment {
 #site-generator a {
 	color: #fff;
 	font-weight: 300;
-	font-family: 'Raleway',helvetica,sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -2685,8 +2691,12 @@ p.comment-form-comment {
 	padding: 0 0px;
 	}
 
+	.padding30{
+	padding: 0 20px;
+	}
+
 	#headerFull{
-		margin: 0 0 -40px 0;
+		margin: 0 0 0px 0;
 	}
 
 	/* new css */
@@ -2712,9 +2722,9 @@ p.comment-form-comment {
 	}
 
 	#headerContent #headerLeft #left{
-	width: 95%;
+	width: 100%;
 	float: left;
-	padding: 0 0 0 2.5%;
+	padding: 0;
 	}
 
 	#headerContent #movieThumbWeek{
@@ -2743,8 +2753,8 @@ p.comment-form-comment {
 
 	#headerContent .padding_header {
 	float: left;
-	width: 95%;
-	padding: 0px 0 0 2.5%;
+	width: 100%;
+	padding: 0px;
 	float: left;
 	margin: 50px 0 15px 0px;
 	background: url(images/headerBgplain.jpg) #424242 repeat scroll 0px 0px;
@@ -2752,7 +2762,7 @@ p.comment-form-comment {
 	}
 
 	#headerRight .padding_header_left{
-		padding-left: 0;
+		padding: 0 20px;
 	}
 
 	#headerRight h1{
@@ -2925,8 +2935,8 @@ p.comment-form-comment {
 	}
 
 	#headerContent .padding_header {
-		width: 95%;
-		padding: 0 0 0 2.5%;
+		width: 100%;
+		padding: 0%;
 		float: left;
 		margin: 50px 0 15px 0px;
 		background: url(images/headerBgplain.jpg) #424242 repeat scroll 0px 0px;
@@ -3091,7 +3101,7 @@ p.comment-form-comment {
 @media (max-width: 450px) {
 		#headerContent h1 {
 		margin: 10px 0 5px 0;
-		font-family: 'Raleway',Helvetica,sans-serif;
+		font-family: 'Source Sans Pro', sans-serif;
 		color: #fff;
 		font-size: 25px;
 		font-weight: 200 !important;
@@ -3103,8 +3113,8 @@ p.comment-form-comment {
 	}
 
 	#headerContent .padding_header {
-		width: 95%;
-		padding: 0 0 0 2.5%;
+		width: 100%;
+		padding: 0;
 		float: left;
 		margin: 0px 0 15px 0px;
 		background: url(images/headerBgplain.jpg) #424242 repeat scroll 0px 0px;
