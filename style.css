@@ -23,7 +23,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
 	font-family: 'Helvetica', sans-serif;
-	font-size: 100%;
+	font-size: 14px;
 	font-style: inherit;
 	font-weight: 300;
 	margin: 0;
@@ -82,7 +82,7 @@ body {
 	width: 100%;
 }
 #page {
-	max-width: 1000px;
+	max-width: 960px;
 	margin: 0px auto;
 }
 #branding hgroup {
@@ -94,10 +94,7 @@ body {
 #primary {
 	float: left;
 	/*margin: 0 -26.4% 0 0;*/
-	width: 57%;
-}
-#content {
-
+	width: 65%;
 }
 
 /*  POST CSS */
@@ -211,15 +208,16 @@ ul#movielist li{
 	margin: 0px 0 10px;
 }
 #secondary {
-	margin: 10px 0 0 0;
+	margin: -10px 0 0 0;
 	/*padding: 2%;*/
 	float: left;
 	/*margin-right: 2%;*/
-	width: 43%;
+	width: 35%;
 }
 
 #secondary .padding{
 	padding-left: 10px;
+	padding-right: 20px;
 }
 
 /* Singular */
@@ -404,7 +402,7 @@ ul#movielist li{
 	width: auto;
 }
 /* Make sure the logo and search form don't collide */
-.one-column #branding #searchform {
+.one-column #header1 #searchform {
 	right: 40px;
 	top: 4em;
 }
@@ -443,19 +441,20 @@ ul#movielist li{
 }
 
 #header1{
+	background: url(images/headerBgplain.jpg) #000 repeat scroll 0px 0px;
 	width: 100%;
-	padding: 10px 0px 0px;
+	padding: 10px 0px 10px;
 	height: 75px;
 }
 
 #headerFull{
-	background: url(images/headerBg.jpg) #424242 repeat-x scroll 0px 0px;
+	background: url(images/headerBgplain.jpg) #000 repeat scroll 0px 0px;
 	width: 100%;
 	height: auto;
 }
 
 #headerFull .max-width{
-	max-width: 1000px;
+	max-width: 960px;
 	margin: 0px auto;
 }
 
@@ -468,7 +467,7 @@ ul#movielist li{
 }
 
 #headerContent h1{
-	margin: -5px 0 6px;
+	margin: 0px 0 5px 0;
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
 	font-size: 30px;
@@ -488,15 +487,6 @@ ul#movielist li{
 #headerContent .movieWeek{
 	width: 49%
 	float: left;
-}
-
-#slideshow_1{
-	height: 100%;
-	position: relative;
-}
-
-.ngg-slideshow{
-	overflow: visible !important;
 }
 
 .header_thumb{
@@ -540,14 +530,15 @@ ul#movielist li{
 
 #headerRight .padding_header_left{
 	padding-left: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 15px;
 }
 
 #headerLeft{
 	position: relative;
-	width: 55%;
+	width: 100%;
 	height: auto;
 	float: left;
+	margin: 0 0 15px;
 }
 
 #headerLeft #left{
@@ -559,7 +550,7 @@ ul#movielist li{
 
 #headerContent #movieThumbWeek{
 	width: 100%;
-	margin: .25em 0 20px 0px;
+	margin: .25em 0 15px 0px;
 	float: left;
 }
 
@@ -584,9 +575,11 @@ ul#movielist li{
 	position: relative;
 }
 
-#branding .logo{
+.logo{
+	position: relative;
 	width: 200px;
-	margin: 10px 0 0 20px;
+	margin: 13px 0 0 0px;
+	float: left;
 }
 
 #logo_menu{
@@ -659,7 +652,7 @@ ul#movielist li{
 }
 
 #movieExtras .extraLimit{
-	max-width: 1000px;
+	max-width: 960px;
 	margin: 0px auto;
 }
 
@@ -692,7 +685,6 @@ ul#movielist li{
 }
 
 
-
 /* =Global
 ----------------------------------------------- */
 
@@ -708,7 +700,7 @@ body {
 
 }
 #page {
-	max-width: 1000px;
+	max-width: 960px;
 	min-height: 100%;
 	height: auto !important;
 	margin: 0 auto 0px;
@@ -863,6 +855,20 @@ a:hover {
 	text-decoration: underline;
 }
 
+.sidebarHightlight{
+	font-weight: bold !important;
+	-o-transition: .2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+	color:#f01f01;
+}
+
+.sidebarHightlight:hover{
+	color:#333;
+}
+
 /* Assistive text */
 .assistive-text {
 	position: absolute !important;
@@ -888,7 +894,7 @@ a:hover {
 
 #spuulLogo{
 	margin: 0px auto;
-	width: 1000px;
+	width: 960px;
 	height: 50px;
 	background: #242424;
 }
@@ -934,6 +940,49 @@ a:hover {
 
 #bannerImg{
 	display: none;
+}
+
+/* slideshow */
+
+.imageSlide{
+	float:left;
+}
+
+.slideContent{
+	position: absolute;
+	height: 390px;
+	z-index: 0;
+	top:0;
+}
+
+.slideContent .imageSlide{
+	height: 390px;
+}
+
+.prev{
+	z-index: 1;
+}
+
+.showing{
+	z-index: 2;
+}
+
+#imageContainer{
+	overflow: hidden;
+	padding: 0 !important;
+	width: 100%;
+	height: 100%;
+}
+
+#slideshow_1{
+	height: auto;
+	position: relative;
+}
+
+#slideshow_1 .playBanner{
+	position: absolute;
+	width: 100px !important;
+	z-index: 5;
 }
 
 
@@ -1026,15 +1075,15 @@ a:hover {
 
 /* Search Form */
 
-#branding #searchform {
+#header1 #searchform {
 	position: relative;
 	right: 0%;
 	text-align: right;
 }
-#branding #searchform div {
+#header1 #searchform div {
 	margin: 0;
 }
-#branding #s {
+#header1 #s {
 	float: none;
 	-webkit-transition-duration: 400ms;
 	-webkit-transition-property: width, background;
@@ -1047,39 +1096,40 @@ a:hover {
 	-o-transition-timing-function: ease;
 	width: 75px;
 }
-#branding #s:focus {
+#header1 #s:focus {
 	background-color: #fff;
 	width: 196px;
 }
-#branding #searchsubmit {
+#header1 #searchsubmit {
 	display: none;
 }
-#branding .only-search #searchform {
+#header1 .only-search #searchform {
 	z-index: 1;
+	margin: 0 0px 0 0;
 }
-#branding .only-search #s {
+#header1 .only-search #s {
 	background-color: #000;
 	border-color: #333;
 	color: #666;
 	position: relative;
-	top: -45px;
-	left: -20px;
+	top: 20px;
+	left: 0px;
 	font-family: 'Source Sans Pro', sans-serif;
 
 }
-#branding .only-search #s,
-#branding .only-search #s:focus {
-	width: 35%;
+#header1 .only-search #s,
+#header1 .only-search #s:focus {
+	width: 29%;
 }
-#branding .only-search #s:focus {
+#header1 .only-search #s:focus {
 	background-color: #fff;
 }
-#branding .with-image #searchform {
+#header1 .with-image #searchform {
 	top: auto;
 	bottom: -27px;
 	max-width: 195px;
 }
-#branding .only-search + #access div {
+#header1 .only-search + #access div {
 	
 }
 
@@ -1089,6 +1139,17 @@ a:hover {
 
 .padding30{
 	padding: 0 0px;
+}
+
+.headerMaxWidth{
+	margin: 0px auto;
+	max-width: 960px;
+	padding: 0 0px;
+}
+
+.padding20{
+	padding: 0 20px;
+	
 }
 
 #main {
@@ -1144,7 +1205,12 @@ a:hover {
 
 .entry-title,
 .entry-title a {
-	padding: 10px 0 0px;
+	-o-transition:.2s;
+ 	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+	padding: 0px 0 0px;
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #333;
 	text-decoration: none;
@@ -1157,6 +1223,7 @@ a:hover {
 .entry-title a:hover,
 .entry-title a:focus,
 .entry-title a:active {
+	color: #f01f01;
 	
 }
 .entry-meta {
@@ -1929,7 +1996,7 @@ section.feature-image.large img {
 	display: block;
 	height: 328px;
 	margin: 1.625em -8.9% 20px;
-	max-width: 1000px;
+	max-width: 960px;
 	padding: 0;
 	position: relative;
 	overflow: hidden;
@@ -2634,7 +2701,7 @@ p.comment-form-comment {
 
 #colophon {
 	clear: both;
-	background: #000;
+	background: url(images/headerBgplain) repeat;
 	z-index: 10;
 }
 #supplementary {
@@ -2672,7 +2739,7 @@ p.comment-form-comment {
 	padding: 1em 20px;
 	text-align: left;
 	color: #666;
-	max-width: 1000px;
+	max-width: 960px;
 	text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
 }
 #site-generator a {
@@ -2695,6 +2762,11 @@ p.comment-form-comment {
 	padding: 0 20px;
 	}
 
+
+	.padding20{
+	padding: 0 20px;
+	}
+
 	#headerFull{
 		margin: 0 0 0px 0;
 	}
@@ -2702,6 +2774,7 @@ p.comment-form-comment {
 	/* new css */
 
 	#headerRight{
+		display: none;
 		margin: 25px 0 0 0;
 		float: left;
 		width: 100%;
@@ -2722,9 +2795,9 @@ p.comment-form-comment {
 	}
 
 	#headerContent #headerLeft #left{
-	width: 100%;
-	float: left;
-	padding: 0;
+		width: 100%;
+		float: left;
+		padding: 0 0 0px 0;
 	}
 
 	#headerContent #movieThumbWeek{
@@ -2787,7 +2860,7 @@ p.comment-form-comment {
 		display: block;
 	}
 
-	#branding .only-search #s {
+	#header1 .only-search #s {
 		margin: 0 0 0 0;
 	}
 
@@ -2949,12 +3022,12 @@ p.comment-form-comment {
 		margin: 0px 0 0 0;
 	}
 
-	#branding .only-search #s,
-	#branding .only-search #s:focus {
+	#header1 .only-search #s,
+	#header1 .only-search #s:focus {
 		width: 33%;
 	}
 
-	#branding .only-search #searchform {
+	#header1 .only-search #searchform {
 	z-index: 1;
 	position: relative;
 	}
@@ -2968,8 +3041,8 @@ p.comment-form-comment {
 	cursor: pointer;
 	}
 
-	#branding .logo{
-	margin: 10px 0 0 20px;
+	#header1 .logo{
+	margin: 13px 0 0 0px;
 	width: 200px;
 	}
 
@@ -2987,7 +3060,7 @@ p.comment-form-comment {
 		font-size: 24px;
 	}
 
-	#branding .only-search #s {
+	#header1 .only-search #s {
 		margin: 0px;
 		width: 30%;
 	}
@@ -3100,10 +3173,10 @@ p.comment-form-comment {
 }
 @media (max-width: 450px) {
 		#headerContent h1 {
-		margin: 10px 0 5px 0;
+		margin: 0px 0 5px 0;
 		font-family: 'Source Sans Pro', sans-serif;
 		color: #fff;
-		font-size: 25px;
+		font-size: 30px;
 		font-weight: 200 !important;
 		position: relative;
 	}
@@ -3121,8 +3194,8 @@ p.comment-form-comment {
 		height: auto;
 	}
 
-	#branding .only-search #s{
-		top: -40px;
+	#header1 .only-search #s{
+		top: 20px;
 		width: 0;
 	}
 
@@ -3169,8 +3242,8 @@ p.comment-form-comment {
 		margin: 0 0 0px 0;
 	}
 
-	#branding .only-search #s:focus {
-	width: 75%;
+	#header1 .only-search #s:focus {
+	width: 88%;
 	}
 
 }
@@ -3187,7 +3260,7 @@ p.comment-form-comment {
 		border-top: none;
 	}
 
-	#branding .logo{
+	#header1 .logo{
 		width: 150px;
 	}
 
@@ -3240,7 +3313,7 @@ p.comment-form-comment {
 	#site-description {
 		font-size: 10pt;
 	}
-	#branding #searchform {
+	#header1 #searchform {
 		display: none;
 	}
 	#branding img {
@@ -3385,7 +3458,7 @@ p.comment-form-comment {
 	margin-right: -7.6%;
 	padding-left: -7.6%;
 	padding-right: -7.6%;
-	max-width: 1000px;
+	max-width: 960px;
 }
 #ie7 section.featured-post {
 	margin-left: -7.6%;

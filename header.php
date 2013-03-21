@@ -44,26 +44,19 @@
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 
- <!-- REQUIRED FOR PARALLAX -->
-<script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.6.4.min.js" ></script>
-<script type="text/javascript" language="JavaScript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js" ></script>
-<script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/manual.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.flexslider-min.js"></script>
-<script>
-$(window).load(function() {
-    $(".flexslider").flexslider({
-        animation: "slide", 
-    });
-});
-</script> 
-
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/plugincss/flexslider-default.css"/>
 <link rel="shortcut icon" href="images/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+
+<script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.6.4.min.js" ></script>
+<script type="text/javascript" language="JavaScript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js" ></script>
+<script type="text/javascript" language="JavaScript" src="<?php bloginfo('stylesheet_directory'); ?>/js/manual.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.flexslider-min.js"></script>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
@@ -84,10 +77,10 @@ $(window).load(function() {
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="headerFull">
-	<div class="max-width">	
-	<header id="branding" role="banner">
-	<div id="header1">
+<div class="indexBG"></div>
+<div id="header1">
+	<div class="headerMaxWidth">
+		<div class="padding20">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory');?>/images/logo.png ?>" class="logo" /></a>
 
 		<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
@@ -155,97 +148,9 @@ $(window).load(function() {
 				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
-	</div><!-- header1 -->
-
-	<?php
-$query_images_args = array(
-    'post_type' => 'attachment', 'post_mime_type' =>'image', 'post_status' => 'inherit', 'posts_per_page' => -1
-);
-
-$query_images = new WP_Query( $query_images_args );
-$images = array(); 
-$header_thumb = array();
-$image_names = array();
-$imagelink1 = array();
-$imagelink2 = array();
-foreach ( $query_images->posts as $image) {
-    $alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);
-    if( strpos($alt, "/?slide") !== FALSE ){
-       $images[]= wp_get_attachment_url( $image->ID );
-       $imagelink1[] = $alt;
-    }elseif(strpos($alt, "/?thumb") !== FALSE ){
-       $header_thumb[]= wp_get_attachment_url( $image->ID );
-       $imagelink2[] = $alt;
-    }
-}
-?>
-
-<script type='text/javascript'>
-  var slideShow = <?php echo json_encode($images); ?>;
-  var slideShowURL = <?php echo json_encode($imagelink1); ?>;
-  var slideShowIndex = 0;
-
-
-
-  setInterval(function(){
-                window.slideShowIndex++;
-                if(window.slideShowIndex >= window.slideShow.length){
-                  window.slideShowIndex = 0;
-                }
-				$('#slideShowImg').attr('src', window.slideShow[window.slideShowIndex]);
-				$('#slideshow_1 .slideshowLink').attr('href', window.slideShowURL[window.slideShowIndex]);
-  }, 3000);
-
-</script>
-
-		<div id="headerContent">
-			<div id="headerLeft">
-				<div id="left">
-					<div class="padding30">
-						<h1>Movies This Week on Spuul</h1>
-						<!-- slideshow -->
-			        	<div id="slideshow_1" class="ngg-slideshow">
-			             	<a class="slideshowLink" href="<?php echo $imagelink1[0]; ?>" target="_blank"><?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:4'>" ?></a>
-		          		</div>
-
-					
-						<div id="movieThumbWeek">
-							<a href="<?php echo $imagelink2[0]; ?>" target="_blank"><img src="<?php echo $header_thumb[0]; ?>" class="header_thumb"/></a>
-							<a href="<?php echo $imagelink2[1]; ?>" target="_blank"><img src="<?php echo $header_thumb[1]; ?>" class="header_thumb gap"/></a>
-						</div>
-					</div>
-				</div>
-				<div style="clear:both;"></div>
-			</div>
-
-			<div id="headerRight">
-				<div class="padding_header">
-					<div class="padding_header_left">
-					
-					<?php
-						$idNum = 162;//838 blog staging //162 localhost 
-						$my_postid = $idNum;//This is page id or post id
-						$content_post = get_post($my_postid);
-						$content = $content_post->post_content;
-						$content = apply_filters('the_content', $content);
-						$content = str_replace(']]>', ']]&gt;', $content);
-					?>
-					<h1><?php echo get_the_title($idNum); ?></h2>
-					<?php
-						echo $content; 
-					?>	
-
-					</div>
-				</div>
-			</div>
-		<div style="clear:both;"></div>
 		</div>
-
-	</header><!-- #branding -->
-	</div><!-- max-width -->
-	</div><!-- headerFull-->
-
+	</div>
+	</div><!-- header1 -->
 <div id="page" class="hfeed">
-
 
 	<div id="main">

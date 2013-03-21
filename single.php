@@ -20,10 +20,5 @@ get_header(); ?>
 				</div><!-- content padding -->	
 			</div><!-- #content -->
 		</div><!-- #primary -->
-<script>
-	$(document).ready(function(){
-		var scrollHeight = $('#branding').outerHeight();
-	});
-</script>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
