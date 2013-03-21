@@ -1109,8 +1109,8 @@ a:hover {
 }
 #header1 .only-search #s {
 	background-color: #000;
-	border-color: #333;
-	color: #666;
+	border-color: #666;
+	color: #999;
 	position: relative;
 	top: 20px;
 	left: 0px;
@@ -1995,7 +1995,7 @@ section.feature-image.large img {
 	border-bottom: 1px solid #ddd;
 	display: block;
 	height: 328px;
-	margin: 1.625em -8.9% 20px;
+	margin: 1.625em 0% 20px; /* -8.8% */
 	max-width: 960px;
 	padding: 0;
 	position: relative;
@@ -3243,7 +3243,7 @@ p.comment-form-comment {
 	}
 
 	#header1 .only-search #s:focus {
-	width: 88%;
+	width: 80%;
 	}
 
 }
