@@ -55,7 +55,7 @@ foreach ( $query_images->posts as $image) {
 						<!-- slideshow -->
 			        	<div id="slideshow_1" class="ngg-slideshow">
 			        		<div id="imageContainer">
-			        			
+
 			             		<a class="slideshowLink" href="<?php echo $imagelink1[0]; ?>" target="_blank"><?php echo "<img id='slideShowImg' src='$images[0]' style='height:135px;width:578px;position:relative;top:0px;left:0px;display:block;z-index:0'>" ?>
 		          			</div>
 		          		</div>
@@ -143,7 +143,9 @@ foreach ( $query_images->posts as $image) {
 
 					<?php else : ?>
 
-						<article id="post-0" class="post no-results not-found">
+
+
+						<article id="post-0" class="content_padding">
 
 								<header class="entry-header">
 									<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
