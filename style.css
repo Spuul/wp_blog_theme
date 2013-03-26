@@ -5,7 +5,7 @@ Author: Spuul Developer
 Author URI: www.spuul.com
 Description: The Spuul blog website. 
 Template: twentyeleven
-Version: 2.1.0
+Version: 2.2.0
 Text Domain: Spuul
 */
 
@@ -25,7 +25,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-family: 'Helvetica', sans-serif;
 	font-size: 14px;
 	font-style: inherit;
-	font-weight: 300;
+	font-weight: 400;
 	margin: 0;
 	outline: 0;
 	padding: 0;
@@ -122,13 +122,13 @@ ul#movielist li{
 }
 
 .movieCol{
-	padding: 5px 0px 5px;
-	margin: 10px 0 15px 0;
+	padding: 5px 0px 0px;
+	margin: 10px 0 0px 0;
 	width: 100%;
 }
 
 .movieCol h1{
-	margin: 10px 0 5px;
+	margin: 10px 0 5px !important;
 }
 
 .movieCol .highlight{
@@ -158,10 +158,11 @@ ul#movielist li{
 
 .movieCol p{
 	font-family: helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 14px;
 	color:#373737;
-	font-weight: 300;
+	font-weight: 400;
 	text-align: justify;
+	line-height: 22px;
 }
 
 .movieCol img{
@@ -182,8 +183,8 @@ ul#movielist li{
 .movieCol li{
 	list-style: none;
 	margin: 0px 0;
-	line-height: 14px;
-	font-size: 12px;
+	line-height: 22px;
+	font-size: 14px;
 }
 
 .movieCol .cast{
@@ -195,7 +196,7 @@ ul#movielist li{
 }
 
 .movieCol .synopsis{
-	line-height: 15px; 
+	line-height: 22px; 
 }
 
 #page .content_padding{
@@ -275,7 +276,7 @@ ul#movielist li{
 	margin: 0;
 }
 .error404 #primary #content {
-	margin: 0 7.6%;
+	margin: 0%;
 	width: auto;
 }
 
@@ -467,11 +468,11 @@ ul#movielist li{
 }
 
 #headerContent h1{
-	margin: 0px 0 5px 0;
+	margin: 0px 0 15px 0;
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
-	font-size: 30px;
-	font-weight: 200 !important;
+	font-size: 36px;
+	font-weight: 300 !important;
 	position: relative;
 	line-height: 1.1;
 }
@@ -1214,8 +1215,8 @@ a:hover {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #333;
 	text-decoration: none;
-	font-weight: 400;
-	font-size: 30px;
+	font-weight: 300;
+	font-size: 32px;
 	line-height: 1;
 	margin: 0px 0px 5px 0;
 	text-shadow: 1px 1px 0px rgba(255,255,255,.2); /* 50% white from bottom */
@@ -1256,8 +1257,8 @@ footer.entry-meta{
 .comment-content h2 {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #000;
-	font-weight: bold;
-	margin: 0 0 .8125em;
+	font-weight: 600;
+	margin: 0 0 .0em;
 }
 .entry-content h3,
 .comment-content h3 {
@@ -2195,7 +2196,6 @@ section.recent-posts .other-recent-posts li:after {
 	clear: both;
 	overflow: hidden;
 	padding: 10px;
-	background: #eee;
 	border-radius: 2px;
 }
 #content nav a {
@@ -2267,7 +2267,7 @@ section.recent-posts .other-recent-posts li:after {
 	font-weight: 300;
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #343534;
-	font-size: 30px;
+	font-size: 28px;
 	margin: 0 0 25px 0;
 	line-height: 1em;
 }
@@ -2701,7 +2701,7 @@ p.comment-form-comment {
 
 #colophon {
 	clear: both;
-	background: url(images/headerBgplain) repeat;
+	background:url(images/headerBgplain.jpg) #424242 repeat scroll 0px 0px;
 	z-index: 10;
 }
 #supplementary {
@@ -2879,7 +2879,7 @@ p.comment-form-comment {
 		font-weight: 400;
 		font-size: 30px;
 		line-height: 1;
-		margin: 30px 0 0px 
+		margin: 30px 0 0px; 
 		text-shadow: -1px -1px 0px rgba(0,0,0,.2); /* 50% white from bottom */
 	}
 

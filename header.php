@@ -81,7 +81,7 @@
 <div id="header1">
 	<div class="headerMaxWidth">
 		<div class="padding20">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory');?>/images/logo.png ?><?php bloginfo('stylesheet_directory');?>/images/logo.png ?>" class="logo" /></a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory');?>/images/logo.png" class="logo" /></a>
 
 		<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
 			<?php get_search_form(); ?>
