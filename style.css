@@ -128,7 +128,7 @@ ul#movielist li{
 }
 
 .movieCol h1{
-	margin: 10px 0 5px !important;
+	margin: 10px 0 0px !important;
 }
 
 .movieCol .highlight{
@@ -145,7 +145,7 @@ ul#movielist li{
 	font-weight: bold;
 	color:#000;
 	font-size: 24px;
-	margin: 0 0 0px;
+	margin: 0 0 10px;
 }
 
 .movieCol h3{
@@ -167,7 +167,7 @@ ul#movielist li{
 
 .movieCol img{
 	float: left;
-	margin: 12px 10px 0px 0px;
+	margin: 15px 10px 0px 0px;
 	padding: 0px 10px 0px 0;
 }
 
